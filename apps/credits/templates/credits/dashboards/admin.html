@@ -1,0 +1,77 @@
+{% load static %}
+<div class="" style="height: 100%">
+    <!-- sidebar menu -->
+    <ul class="nav sidebar-inner" id="sidebar-menu">
+        <li class="has-sub active expand">
+            <a
+                class="sidenav-item-link"
+                href="javascript:void(0)"
+                data-toggle="collapse"
+                data-target="#dashboard"
+                aria-expanded="false"
+                aria-controls="dashboard"
+            >
+                <i class="mdi mdi-view-dashboard-outline"></i>
+                <span class="nav-text">Dashboard</span> <b class="caret"></b>
+            </a>
+
+            <ul
+                class="collapse show"
+                id="dashboard"
+                data-parent="#sidebar-menu"
+            >
+                <div class="sub-menu">
+                    <li
+                        class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                    >
+                        <a
+                            class="sidenav-item-link"
+                            href="{% url 'credits:home' %}"
+                        >
+                            <span class="nav-text">Credits Statistic</span>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </li>
+        <li class="has-sub">
+            <a
+                class="sidenav-item-link"
+                href="javascript:void(0)"
+                data-toggle="collapse"
+                data-target="#charts"
+                aria-expanded="false"
+                aria-controls="charts"
+            >
+                <i class="mdi mdi-chart-pie"></i>
+                <span class="nav-text">Charts</span> <b class="caret"></b>
+            </a>
+
+            <ul class="collapse show" id="charts" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+                    {% if not graphics_exists %}
+                    <li
+                        class="{% if request.resolver_match.url_name == 'main' %}active{% endif %}"
+                    >
+                        <a
+                            class="sidenav-item-link"
+                            href="{% url 'analytics:main' %}"
+                        >
+                            <span class="nav-text">Create Statistics</span>
+                        </a>
+                    </li>
+                    {% else %} {% for graph in graphs %}
+                    <li
+                        class="{% if request.resolver_match.url_name == 'graph-detail' and request.resolver_match.kwargs.graph == graph.name %}active{% endif %}"
+                    >
+                        <a
+                            href="{% url 'analytics:graph-detail' graph=graph.name %}"
+                            >{{ graph.templates_name }}</a
+                        >
+                    </li>
+                    {% endfor %} {% endif %}
+                </div>
+            </ul>
+        </li>
+    </ul>
+</div>

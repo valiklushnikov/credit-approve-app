@@ -13,6 +13,7 @@ class LoginForm(forms.Form):
             attrs={
                 "class": "form-control",
                 "id": "email",
+                "placeholder": " ",
             }
         ),
     )
@@ -23,6 +24,7 @@ class LoginForm(forms.Form):
             attrs={
                 "class": "form-control",
                 "id": "password-field",
+                "placeholder": " ",
             }
         ),
     )
@@ -46,6 +48,7 @@ class RegisterForm(forms.ModelForm):
             attrs={
                 "class": "form-control",
                 "id": "email",
+                "placeholder": " ",
             }
         ),
     )
@@ -56,6 +59,7 @@ class RegisterForm(forms.ModelForm):
             attrs={
                 "class": "form-control",
                 "id": "username",
+                "placeholder": " ",
             }
         ),
     )
@@ -66,6 +70,7 @@ class RegisterForm(forms.ModelForm):
             attrs={
                 "class": "form-control",
                 "id": "password-field",
+                "placeholder": " ",
             }
         ),
     )
@@ -77,6 +82,7 @@ class RegisterForm(forms.ModelForm):
             attrs={
                 "class": "form-control",
                 "id": "repeat-password-field",
+                "placeholder": " ",
             }
         ),
     )

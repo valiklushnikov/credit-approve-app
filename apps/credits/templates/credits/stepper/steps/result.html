@@ -1,0 +1,21 @@
+{% extends 'credits/stepper/base.html' %}
+{% load static %}
+{% block form_step %}
+<div class="card-body text-center mx-auto">
+    <h2 class="text-uppercase">Result for your request</h2>
+        {% if approved %}
+        <div class="answer__picture">
+            <img class="answer__image" src="{% static 'images/accept.png' %}" alt="approved">
+        </div>
+        <div>Congratulation, we approve your request.</div>
+        {% else %}
+        <div class="answer__picture">
+            <img class="answer__image" src="{% static 'images/decline.png' %}" alt="decline">
+        </div>
+        <div>Sorry, we can't approve your request.</div>
+        {% endif %}
+    <a class="btn btn-primary mt-5" href="{% url 'credits:home' %}" title="Home">Go Home</a>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,30 @@
+{% extends 'credits/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <div class="col-xl-12 col-md-12">
+        <div class="card card-default">
+            <div class="progress mb-4">
+                <div class="progress-bar" role="progressbar"
+                     style="width: {{ progress }}%;"
+                     aria-valuenow="{{ progress }}"
+                     aria-valuemin="0" aria-valuemax="100">
+                    {{ step_index }} / {{ steps_total }}
+                </div>
+            </div>
+            {% block form_step %}{% endblock %}
+            <div class="card-footer d-flex flex-wrap bg-white p-0">
+                <div class="col-6 px-0">
+                    <div class="text-center p-4">
+                    </div>
+                </div>
+                <div class="col-6 px-0">
+                    <div class="text-center p-4 border-left">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

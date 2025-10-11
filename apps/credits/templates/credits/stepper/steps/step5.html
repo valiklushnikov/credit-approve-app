@@ -1,0 +1,27 @@
+{% extends 'credits/stepper/base.html' %}
+{% load static %}
+{% block form_step %}
+<div class="card-header justify-content-center">
+    <h2 class="text-center text-uppercase">Step {{ step_index }}</h2>
+</div>
+<div class="card-body text-center w-25 mx-auto">
+    <form method="post">
+        {% csrf_token %}
+        {{ wizard.management_form }}
+        <div class="form-group mt-3">
+            {{ form.self_employed }}
+            <label class="form-control-placeholder right-middle" for="self-employed">Self Employed</label>
+        </div>
+        {% if form.self_employed.errors %}
+        <div class="text-danger small text-right">
+            {{ form.self_employed.errors.0 }}
+        </div>
+        {% endif %}
+        <div class="form-group">
+            <button type="submit" class="form-control btn btn-primary rounded submit px-3">
+                Next
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

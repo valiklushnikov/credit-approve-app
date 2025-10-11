@@ -1,0 +1,48 @@
+{% load static %}
+<div class="" style="height: 100%">
+    <ul class="nav sidebar-inner" id="sidebar-menu">
+        <li class="has-sub active expand">
+            <a
+                class="sidenav-item-link"
+                href="javascript:void(0)"
+                data-toggle="collapse"
+                data-target="#dashboard"
+                aria-expanded="false"
+                aria-controls="dashboard"
+            >
+                <i class="mdi mdi-view-dashboard-outline"></i>
+                <span class="nav-text">Dashboard</span> <b class="caret"></b>
+            </a>
+
+            <ul
+                class="collapse show"
+                id="dashboard"
+                data-parent="#sidebar-menu"
+            >
+                <div class="sub-menu">
+                    <li
+                        class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                    >
+                        <a
+                            class="sidenav-item-link"
+                            href="{% url 'credits:home' %}"
+                        >
+                            <span class="nav-text">Credit Request</span>
+                        </a>
+                    </li>
+
+                    <li
+                        class="{% if request.resolver_match.url_name == 'user_orders' %}active{% endif %}"
+                    >
+                        <a
+                            class="sidenav-item-link"
+                            href="{% url 'credits:user_orders' %}"
+                        >
+                            <span class="nav-text">My Credits</span>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </li>
+    </ul>
+</div>

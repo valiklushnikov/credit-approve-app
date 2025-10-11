@@ -1,0 +1,63 @@
+{% extends 'credits/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="card card-default">
+    <div class="card-header justify-content-center">
+        <h1 class="text-center text-uppercase">Statistics collection / Graphing</h1>
+    </div>
+    <div class="card-body text-center font-size-20 d-flex flex-column align-items-center justify-content-center">
+        <button id="start-btn" class="btn btn-primary btn-lg p-3">Create graphics</button>
+        <div id="loader">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+        <div class="text-center mt-5" id="message"></div>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById("start-btn");
+    const loader = document.getElementById("loader");
+    const message = document.getElementById("message");
+
+    btn.addEventListener("click", () => {
+        btn.style.display = "none";
+        loader.style.display = "block";
+        message.textContent = "Creating analytics graphics...";
+
+        fetch("{% url 'analytics:collect_stats' %}", {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}",
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                loader.style.display = "none";
+
+                if (data.status === "success") {
+                    message.innerHTML = "<div class='answer__picture'><img class='answer__image' src='{% static 'images/accept.png' %}' alt='OK'></div>";
+                    message.style.color = "green";
+                    setTimeout(() => {
+                        window.location.href = "/";
+                    }, 1000);
+                } else {
+                    message.innerHTML = "<div class='answer__picture'><img class='answer__image' src='{% static 'images/decline.png' %}' alt='Error'></div>";
+                    message.style.color = "red";
+                }
+            })
+            .catch(error => {
+                loader.style.display = "none";
+                btn.disabled = false;
+                message.textContent = "Something went wrong.";
+                message.style.color = "red";
+            });
+    });
+</script>
+{% endblock %}

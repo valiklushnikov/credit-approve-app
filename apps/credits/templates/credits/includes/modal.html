@@ -1,0 +1,58 @@
+{% load static %}
+<div class="modal fade" id="updateModalForm{{ order.id }}" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalFormTitle"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalFormTitle">Order: #{{ order.id }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="order_id" value="{{ order.id }}">
+                    <select name="prediction_result" id="form-status-update" class="form-control text-center">
+                        {% for value, label in update_form.prediction_result.field.choices %}
+                        <option value="{{ value }}" {% if order.prediction_result == value %}selected{% endif %}>
+                            {{ label }}
+                        </option>
+                        {% endfor %}
+                    </select>
+
+                    <div class="modal-footer d-flex justify-content-around">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-danger btn-pill" data-dismiss="modal">Close</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteModal{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel">Delete Order #{{ order.id }} ?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="{% url 'credits:delete_order' order.id %}">
+                    {% csrf_token %}
+                    <div class="modal-footer d-flex justify-content-around">
+                        <button type="button" class="btn btn-danger btn-pill" data-dismiss="modal">No</button>
+                        <button type="submit" class="btn btn-primary btn-pill">Yes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

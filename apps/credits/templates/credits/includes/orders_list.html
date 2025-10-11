@@ -1,0 +1,66 @@
+{% extends 'credits/base.html' %} {% load static %} {% block content %}
+<div class="row">
+    <div class="col-12">
+        <div
+            class="card card-table-border-none recent-orders"
+            id="recent-orders"
+        >
+            <div
+                class="card-header justify-content-between align-items-center"
+            ></div>
+            <div class="card-header justify-content-center">
+                <h2>My Orders</h2>
+            </div>
+            <div class="card-body pt-0 pb-5">
+                <table class="table card-table text-center" style="width: 100%">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th class="d-none d-lg-table-cell">Order Date</th>
+                            <th class="d-none d-lg-table-cell">Loan amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td>{{ order.id }}</td>
+                            <td class="d-none d-lg-table-cell">
+                                {{ order.created_at|date:"Y-m-d H:i" }}
+                            </td>
+                            <td class="d-none d-lg-table-cell">
+                                ${{ order.loan_amount }}
+                            </td>
+                            <td>
+                                <span class="badge {% if order.prediction_result %}badge-success{% else %}badge-danger{% endif %}">{% if order.prediction_result %}Completed{%else %}Cancelled{% endif %}</span>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr class="text-center">
+                            <td class="pt-5" colspan="5">No orders</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pagination justify-content-center">
+            <div class="step-links w-50 text-center">
+                {% if page_obj.has_previous %}
+                    <a class="btn btn-primary" href="?page=1">&laquo; First</a>
+                    <a class="btn btn-primary" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+
+                <span class="current ml-2 mr-2">
+                    {% if page_obj.paginator.num_pages > 1 %} Page {{page_obj.number }} {% else %} {% endif %}
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a class="btn btn-primary" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a class="btn btn-primary" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

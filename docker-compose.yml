@@ -1,0 +1,63 @@
+version: "3.9"
+
+services:
+  ml:
+    build: .
+    container_name: ml
+    command: sh ml/entrypoint.sh
+    volumes:
+      - ml_data:/ml_data
+
+  web:
+    build: .
+    container_name: django_app
+    command: sh entrypoint.sh
+    volumes:
+      - .:/app
+      - ml_data:/ml_data
+      - static_data:/app/staticfiles
+      - media_data:/app/media
+    expose:
+      - "8000"
+    depends_on:
+      ml:
+        condition: service_completed_successfully
+      db:
+        condition: service_started
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - static_data:/app/staticfiles
+      - media_data:/app/media
+    depends_on:
+      - web
+
+  adminer:
+    image: adminer:latest
+    depends_on:
+      - db
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
+  ml_data:
+  static_data:
+  media_data:
