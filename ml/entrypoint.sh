@@ -1,3 +1,4 @@
+#!/bin/sh
 set -e
 
 MODEL_DIR="/app/ml_data"
