@@ -4,8 +4,11 @@ import joblib
 import os
 from .data_transform import transform_input
 
-MODEL_WITH_CH = "/ml_data/best_model_with_credit_history.pkl"
-MODEL_WITHOUT_CH = "/ml_data/best_model_without_credit_history.pkl"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_DIR = os.path.join(BASE_DIR, "ml_data")
+
+MODEL_WITH_CH = os.path.join(MODEL_DIR, "best_model_with_credit_history.pkl")
+MODEL_WITHOUT_CH = os.path.join(MODEL_DIR, "best_model_without_credit_history.pkl")
 
 
 class EnsemblePredictor:
@@ -70,15 +73,3 @@ class EnsemblePredictor:
             raise ValueError("Method must be one of: 'mode1', 'mode2', 'mode3'")
 
         return pred
-
-
-# PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
-# MODELS_DIR = os.path.join(PROJECT_ROOT, "ml_data")
-
-# MODEL_WITH_CH = os.path.join(MODELS_DIR, "best_model_with_credit_history.pkl")
-# MODEL_WITHOUT_CH = os.path.join(MODELS_DIR, "best_model_without_credit_history.pkl")
-
-# MODEL_WITH_CH = "/ml_data/best_model_with_credit_history.pkl"
-# MODEL_WITHOUT_CH = "/ml_data/best_model_without_credit_history.pkl"
-#
-# ensemble = EnsemblePredictor(MODEL_WITH_CH, MODEL_WITHOUT_CH)

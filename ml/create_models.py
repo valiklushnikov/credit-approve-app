@@ -421,7 +421,7 @@ best_model_with = best_models[best_with_ch["Model"]]
 best_model_without = best_models[best_without_ch["Model"]]
 
 
-models_dir = "/ml_data"
+models_dir = os.path.join(os.path.dirname(__file__), "../ml_data")
 os.makedirs(models_dir, exist_ok=True)
 
 # Шляхи до файлів

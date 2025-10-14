@@ -5,8 +5,9 @@ services:
     build: .
     container_name: ml
     command: sh ml/entrypoint.sh
+    working_dir: /app
     volumes:
-      - ml_data:/ml_data
+      - ml_data:/app/ml_data
 
   web:
     build: .
@@ -14,7 +15,7 @@ services:
     command: sh entrypoint.sh
     volumes:
       - .:/app
-      - ml_data:/ml_data
+      - ml_data:/app/ml_data
       - static_data:/app/staticfiles
       - media_data:/app/media
     expose:
