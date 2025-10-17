@@ -1,0 +1,177 @@
+Production розгортання
+======================
+
+Рекомендації для production середовища.
+
+Підготовка
+----------
+
+1. SecurityChecklist
+~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    python manage.py check --deploy
+
+Виправте всі WARNING та ERROR.
+
+2. Змінні оточення
+~~~~~~~~~~~~~~~~~~
+
+Створіть ``.env`` файл:
+
+.. code-block:: bash
+
+    SECRET_KEY=your-strong-secret-key-here
+    DEBUG=False
+    ALLOWED_HOSTS=yourdomain.com,www.yourdomain.com
+
+    POSTGRES_DB=production_db
+    POSTGRES_USER=prod_user
+    POSTGRES_PASSWORD=strong_password_here
+    POSTGRES_HOST=db
+    POSTGRES_PORT=5432
+
+3. SSL/TLS
+~~~~~~~~~~
+
+Налаштуйте nginx з Let's Encrypt:
+
+.. code-block:: nginx
+
+    server {
+        listen 443 ssl http2;
+        server_name yourdomain.com;
+
+        ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+
+        # SSL налаштування
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers HIGH:!aNULL:!MD5;
+        ssl_prefer_server_ciphers on;
+
+        location / {
+            proxy_pass http://web:8000;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /static/ {
+            alias /app/staticfiles/;
+        }
+
+        location /media/ {
+            alias /app/media/;
+        }
+    }
+
+    server {
+        listen 80;
+        server_name yourdomain.com;
+        return 301 https://$server_name$request_uri;
+    }
+
+Оптимізація
+-----------
+
+1. Gunicorn налаштування
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    # entrypoint.sh
+    gunicorn core.wsgi:application \
+        --bind 0.0.0.0:8000 \
+        --workers 4 \
+        --threads 2 \
+        --timeout 300 \
+        --max-requests 1000 \
+        --max-requests-jitter 50 \
+        --preload \
+        --access-logfile - \
+        --error-logfile -
+
+Формула workers: ``(2 * CPU_cores) + 1``
+
+2. PostgreSQL оптимізація
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: sql
+
+    -- Індекси
+    CREATE INDEX idx_credits_user ON credits_creditapplication(user_id);
+    CREATE INDEX idx_credits_created ON credits_creditapplication(created_at);
+    CREATE INDEX idx_credits_result ON credits_creditapplication(prediction_result);
+
+3. Кешування
+~~~~~~~~~~~~
+
+Додайте Redis:
+
+.. code-block:: yaml
+
+    # docker-compose.yml
+    redis:
+      image: redis:7-alpine
+      container_name: redis
+      ports:
+        - "6379:6379"
+
+.. code-block:: python
+
+    # settings.py
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+            'LOCATION': 'redis://redis:6379/1',
+            'OPTIONS': {
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            }
+        }
+    }
+
+4. Статичні файли
+~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    # settings.py
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+Моніторинг
+----------
+
+1. Логування
+~~~~~~~~~~~~
+
+.. code-block:: python
+
+    # settings.py
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'formatters': {
+            'verbose': {
+                'format': '{levelname} {asctime} {module} {message}',
+                'style': '{',
+            },
+        },
+        'handlers': {
+            'file': {
+                'level': 'INFO',
+                'class': 'logging.handlers.RotatingFileHandler',
+                'filename': '/var/log/django/app.log',
+                'maxBytes': 1024 * 1024 * 10,  # 10 MB
+                'backupCount': 5,
+                'formatter': 'verbose',
+            },
+        },
+        'root': {
+            'handlers': ['file'],
+            'level': 'INFO',
+        },
+    }

@@ -6,6 +6,15 @@ from .models import CreditApplication
 
 
 class OrderFilter(django_filters.FilterSet):
+    """
+        Фільтр для кредитних заявок за періодами часу.
+
+        Дозволяє фільтрувати заявки за різними часовими періодами:
+        всі, сьогодні, вчора, тиждень, місяць, минулий місяць, рік.
+
+        Поля:
+            period: Вибір часового періоду для фільтрації
+    """
     PERIOD_CHOICES = [
         ("all", "All"),
         ("today", "Today"),
@@ -34,6 +43,17 @@ class OrderFilter(django_filters.FilterSet):
         fields = ["period"]
 
     def filter_by_period(self, queryset, name, value):
+        """
+            Фільтрує queryset за вибраним часовим періодом.
+
+            Args:
+                queryset: Набір об'єктів для фільтрації
+                name: Назва поля фільтру
+                value: Значення періоду (today, yesterday, week, month, last_month, year, all)
+
+            Returns:
+                QuerySet: Відфільтрований набір кредитних заявок
+        """
         now = timezone.now()
 
         if value == "today":

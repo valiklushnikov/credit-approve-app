@@ -1,0 +1,105 @@
+REST API модуль
+===============
+
+Serializers
+-----------
+
+UserInfoWithoutCreditHistorySerializer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.api.serializers.UserInfoWithoutCreditHistorySerializer
+   :members:
+   :exclude-members: GENDER_CHOICES, MARRIED_CHOICES, EDUCATION_CHOICES
+   :no-index:
+
+UserInfoWithCreditHistorySerializer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.api.serializers.UserInfoWithCreditHistorySerializer
+   :members: validate_credit_history
+   :no-index:
+
+Views
+-----
+
+.. autofunction:: apps.api.views.get_predict
+   :no-index:
+
+Приклади використання
+---------------------
+
+Python requests
+~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    import requests
+
+    url = "http://127.0.0.1:80/api/get_predict/"
+
+    data = {
+        "gender": "Male",
+        "married": "Yes",
+        "dependents": 0,
+        "education": "Graduate",
+        "self_employed": "No",
+        "applicant_income": 5000.00,
+        "coapplicant_income": 0.00,
+        "loan_amount": 100000.00,
+        "loan_amount_term": 360,
+        "credit_history": "Yes",
+        "property_area": "Urban"
+    }
+
+    response = requests.post(url, json=data)
+
+    if response.status_code == 200:
+        result = response.json()
+        print(f"Prediction: {result['prediction']}")
+    else:
+        print(f"Errors: {response.json()}")
+
+JavaScript fetch
+~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    async function getPrediction(data) {
+        try {
+            const response = await fetch('http://127.0.0.1:80/api/get_predict/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                console.log('Prediction:', result.prediction);
+                return result.prediction;
+            } else {
+                console.error('Validation errors:', result);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    // Використання
+    const applicationData = {
+        gender: "Female",
+        married: "No",
+        dependents: 0,
+        education: "Graduate",
+        self_employed: "No",
+        applicant_income: 3000.00,
+        coapplicant_income: 0.00,
+        loan_amount: 66000.00,
+        loan_amount_term: 360,
+        credit_history: "Yes",
+        property_area: "Urban"
+    };
+
+    getPrediction(applicationData);

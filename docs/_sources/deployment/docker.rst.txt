@@ -1,0 +1,194 @@
+Розгортання через Docker
+=========================
+
+Огляд
+-----
+
+Проект включає повну Docker конфігурацію для легкого розгортання.
+
+Сервіси
+-------
+
+Docker Compose запускає 5 сервісів:
+
+1. **ml** - Генерація ML моделей
+2. **web** - Django додаток
+3. **db** - PostgreSQL база даних
+4. **nginx** - Reverse proxy та статичні файли
+5. **adminer** - Web-інтерфейс для БД
+
+Структура файлів
+----------------
+
+.. code-block:: text
+
+    .
+    ├── Dockerfile
+    ├── docker-compose.yml
+    ├── entrypoint.sh
+    ├── ml/entrypoint.sh
+    └── nginx/
+        └── nginx.conf
+
+Dockerfile
+----------
+
+.. code-block:: dockerfile
+
+    FROM python:3.13-slim
+
+    WORKDIR /app
+
+    COPY requirements.txt .
+    RUN pip install --no-cache-dir -r requirements.txt
+
+    COPY . .
+    COPY ml/loan_data.csv /app/ml/loan_data.csv
+
+Docker Compose
+--------------
+
+.. literalinclude:: ../../docker-compose.yml
+   :language: yaml
+
+Volumes
+~~~~~~~
+
+* **postgres_data**: Дані PostgreSQL
+* **ml_data**: Збережені ML моделі
+* **static_data**: Статичні файли Django
+* **media_data**: Медіа файли (графіки)
+
+Entrypoint Scripts
+------------------
+
+Django entrypoint (entrypoint.sh):
+
+.. literalinclude:: ../../entrypoint.sh
+   :language: bash
+
+ML entrypoint (ml/entrypoint.sh):
+
+.. literalinclude:: ../../ml/entrypoint.sh
+   :language: bash
+
+Запуск
+------
+
+Перший запуск
+~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    # Клонування репозиторію
+    git clone https://github.com/valiklushnikov/credit-approve-app.git
+    cd credit-approve-app
+
+    # Створення .env файлу
+    cp env.txt .env
+    # Відредагуйте .env за необхідності
+
+    # Збірка та запуск
+    docker-compose up --build
+
+Звичайний запуск
+~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    # Запуск у фоновому режимі
+    docker-compose up -d
+
+    # Перегляд логів
+    docker-compose logs -f web
+
+    # Зупинка
+    docker-compose down
+
+Команди управління
+------------------
+
+Міграції
+~~~~~~~~
+
+.. code-block:: bash
+
+    docker-compose exec web python manage.py migrate
+
+Створення суперкористувача
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    docker-compose exec web python manage.py createsuperuser
+
+Збір статичних файлів
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    docker-compose exec web python manage.py collectstatic --noinput
+
+Shell
+~~~~~
+
+.. code-block:: bash
+
+    docker-compose exec web python manage.py shell
+
+Доступ до БД
+~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    docker-compose exec db psql -U postgres -d postgres
+
+Або через Adminer: http://localhost:8080
+
+Оновлення
+---------
+
+.. code-block:: bash
+
+    # Зупинка сервісів
+    docker-compose down
+
+    # Оновлення коду
+    git pull
+
+    # Пересбірка образів
+    docker-compose build
+
+    # Запуск
+    docker-compose up -d
+
+Налагодження
+------------
+
+Перегляд логів конкретного сервісу:
+
+.. code-block:: bash
+
+    docker-compose logs -f web
+    docker-compose logs -f db
+    docker-compose logs -f nginx
+
+Вхід в контейнер:
+
+.. code-block:: bash
+
+    docker-compose exec web /bin/bash
+
+Перезапуск сервісу:
+
+.. code-block:: bash
+
+    docker-compose restart web
+
+Production налаштування
+-----------------------
+
+1. **Змінити SECRET_KEY** в .env
+2. **Встановити DEBUG=False**
+3. **Налаштувати ALLOWED_HOSTS**
+4. **Використати SSL/TLS** (Let's Encrypt)

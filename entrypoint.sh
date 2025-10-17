@@ -14,4 +14,8 @@ else:
     print("Superuser alredy exists.")
 END
 
+python manage.py shell -c "from django.core.cache import cache; cache.clear()"
+
+export PYTHONUNBUFFERED=1
+
 exec gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 2 --threads 2 --timeout 300 --preload

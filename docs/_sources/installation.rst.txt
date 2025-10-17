@@ -1,0 +1,69 @@
+Встановлення
+============
+
+Системні вимоги
+---------------
+
+* Python 3.13+
+* PostgreSQL 15+
+* Docker & Docker Compose (опціонально)
+
+Встановлення та запуск
+---------------------
+
+1. Клонування репозиторію
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    git clone https://github.com/valiklushnikov/credit-approve-app.git
+    cd credit-approve-app
+
+
+2. Налаштування змінних середовища
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Створіть файл `.env` на основі `env.txt`:
+
+.. code-block:: bash
+
+    cp env.txt .env
+
+
+3. Налаштування змінних оточення
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Відредагуйте `.env` при необхідності:
+
+.. code-block:: bash
+
+    SECRET_KEY=your-secret-key-here
+    DEBUG=False
+    ALLOWED_HOSTS=127.0.0.1,localhost
+
+    # Database
+    POSTGRES_DB=postgres
+    POSTGRES_USER=postgres
+    POSTGRES_PASSWORD=postgres
+    POSTGRES_HOST=db
+    POSTGRES_PORT=5432
+
+4. Запуск з Docker Compose
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: bash
+
+    docker-compose up -d
+
+Сервіси будуть доступні за адресами:
+
+- **Застосунок**: http://127.0.0.1:80
+- **Adminer** (управління БД): http://127.0.0.1:8080
+
+5. Ініціалізація бази даних
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+При першому запуску автоматично:
+- Запускаються міграції
+- Збираються статичні файли
+- Створюється суперкористувач `admin@example.com` / `admin123`

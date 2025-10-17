@@ -1,0 +1,211 @@
+REST API Довідник
+=================
+
+Огляд
+-----
+
+Credit Approval App надає RESTful API для інтеграції з іншими системами.
+
+Base URL
+~~~~~~~~
+
+.. code-block:: text
+
+    http://domain.com/api/
+
+Автентифікація
+~~~~~~~~~~~~~~
+
+API endpoint ``get_predict/`` доступний без автентифікації (AllowAny).
+
+Формат відповіді
+~~~~~~~~~~~~~~~~
+
+Всі відповіді повертаються у форматі JSON.
+
+Endpoints
+---------
+
+POST /api/get_predict/
+~~~~~~~~~~~~~~~~~~
+
+Отримання прогнозу схвалення кредитної заявки.
+
+**Request Body:**
+
+.. code-block:: json
+
+    {
+        "gender": "Male",
+        "married": "Yes",
+        "dependents": 2,
+        "education": "Graduate",
+        "self_employed": "No",
+        "applicant_income": 5000.00,
+        "coapplicant_income": 2000.00,
+        "loan_amount": 150000.00,
+        "loan_amount_term": 360,
+        "credit_history": "Yes",
+        "property_area": "Urban"
+    }
+
+**Response (Success - 200 OK):**
+
+.. code-block:: json
+
+    {
+        "prediction": 1
+    }
+
+**Response (Error - 400 Bad Request):**
+
+.. code-block:: json
+
+    {
+        "field_name": [
+            "Error message"
+        ]
+    }
+
+**Параметри:**
+
+.. list-table::
+    :header-rows: 1
+    :widths: 20 15 15 50
+
+    * - Параметр
+      - Тип
+      - Обов'язковий
+      - Опис
+    * - gender
+      - string
+      - Так
+      - Стать: "Male" або "Female"
+    * - married
+      - string
+      - Так
+      - Сімейний стан: "Yes" або "No"
+    * - dependents
+      - integer
+      - Так
+      - Кількість утриманців (≥0)
+    * - education
+      - string
+      - Так
+      - Освіта: "Graduate" або "Not Graduate"
+    * - self_employed
+      - string
+      - Так
+      - Самозайнятість: "Yes" або "No"
+    * - applicant_income
+      - decimal
+      - Так
+      - Дохід заявника (≥0)
+    * - coapplicant_income
+      - decimal
+      - Так
+      - Дохід співзаявника (≥0)
+    * - loan_amount
+      - decimal
+      - Так
+      - Сума кредиту (≥0)
+    * - loan_amount_term
+      - integer
+      - Так
+      - Термін кредиту в місяцях (≥1)
+    * - credit_history
+      - string
+      - Залежить
+      - Кредитна історія: "Yes" або "No" (не потрібна для mode2)
+    * - property_area
+      - string
+      - Так
+      - Тип місцевості: "Urban", "Semiurban", "Rural"
+
+**Приклади використання:**
+
+Python:
+
+.. code-block:: python
+
+    import requests
+
+    url = "http://127.0.0.1:80/api/get_predict/"
+    data = {
+        "gender": "Male",
+        "married": "Yes",
+        "dependents": 0,
+        "education": "Graduate",
+        "self_employed": "No",
+        "applicant_income": 5000.00,
+        "coapplicant_income": 0.00,
+        "loan_amount": 100000.00,
+        "loan_amount_term": 360,
+        "credit_history": "Yes",
+        "property_area": "Urban"
+    }
+
+    response = requests.post(url, json=data)
+    result = response.json()
+    print(f"Prediction: {result['prediction']}")
+
+JavaScript:
+
+.. code-block:: javascript
+
+    fetch('http://127.0.0.1:80/api/get_predict/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            gender: "Male",
+            married: "Yes",
+            dependents: 0,
+            education: "Graduate",
+            self_employed: "No",
+            applicant_income: 5000.00,
+            coapplicant_income: 0.00,
+            loan_amount: 100000.00,
+            loan_amount_term: 360,
+            credit_history: "Yes",
+            property_area: "Urban"
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log('Prediction:', data.prediction));
+
+cURL:
+
+.. code-block:: bash
+
+    curl -X POST http://127.0.0.1:80/api/get_predict/ \
+      -H "Content-Type: application/json" \
+      -d '{
+        "gender": "Male",
+        "married": "Yes",
+        "dependents": 0,
+        "education": "Graduate",
+        "self_employed": "No",
+        "applicant_income": 5000.00,
+        "coapplicant_income": 0.00,
+        "loan_amount": 100000.00,
+        "loan_amount_term": 360,
+        "credit_history": "Yes",
+        "property_area": "Urban"
+      }'
+
+Serializers
+-----------
+
+.. automodule:: apps.api.serializers
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Views
+-----
+
+.. automodule:: apps.api.views
+    :members:
+    :undoc-members:

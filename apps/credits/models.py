@@ -6,6 +6,19 @@ User = get_user_model()
 
 
 class PredictionConfig(models.Model):
+    """
+        Модель конфігурації режимів прогнозування.
+
+        Зберігає активний режим роботи ML моделі для прогнозування
+        схвалення кредитних заявок.
+
+        Attributes:
+            active_mode (CharField): Активний режим прогнозування
+                - mode1: ModelA з історією кредиту
+                - mode2: ModelB без історії кредиту
+                - mode3: Ансамбль ModelA+ModelB
+            updated_at (DateTimeField): Дата останнього оновлення
+    """
     MODE_CHOICES = [
         ("mode1", "ModelA with credit history"),
         ("mode2", "ModelB without credit history"),
@@ -29,6 +42,28 @@ class PredictionConfig(models.Model):
 
 
 class CreditApplication(models.Model):
+    """
+        Модель кредитної заявки користувача.
+
+        Зберігає всю інформацію про заявку на кредит та результат
+        прогнозування від ML моделі.
+
+        Attributes:
+            user (ForeignKey): Користувач, який подав заявку
+            gender (CharField): Стать заявника
+            married (CharField): Сімейний стан
+            dependents (PositiveIntegerField): Кількість утриманців
+            education (CharField): Рівень освіти
+            self_employed (CharField): Чи є самозайнятим
+            applicant_income (DecimalField): Дохід заявника
+            coapplicant_income (DecimalField): Дохід співзаявника
+            loan_amount (DecimalField): Сума кредиту
+            loan_amount_term (PositiveIntegerField): Термін кредиту (місяці)
+            credit_history (FloatField): Наявність кредитної історії (1.0/0.0)
+            property_area (CharField): Тип місцевості (міська/передмістя/сільська)
+            prediction_result (BooleanField): Результат прогнозування (схвалено/відхилено)
+            created_at (DateTimeField): Дата створення заявки
+    """
     GENDER_CHOICES = [
         ("Male", "Male"),
         ("Female", "Female"),

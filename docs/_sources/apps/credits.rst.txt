@@ -1,0 +1,139 @@
+Модуль credits
+==============
+
+Управління кредитними заявками та прогнозуванням.
+
+Models
+------
+
+PredictionConfig
+~~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.models.PredictionConfig
+   :members: __str__
+   :no-index:
+
+CreditApplication
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.models.CreditApplication
+   :members: __str__
+   :no-index:
+
+Forms
+-----
+
+Step Forms
+~~~~~~~~~~
+
+.. autoclass:: apps.credits.forms.Step1Form
+    :members:
+    :exclude-members: base_fields, declared_fields, media
+    :no-index:
+
+.. autoclass:: apps.credits.forms.Step2Form
+    :members:
+    :exclude-members: base_fields, declared_fields, media
+    :no-index:
+
+.. autoclass:: apps.credits.forms.Step3Form
+    :members:
+    :exclude-members: base_fields, declared_fields, media
+    :no-index:
+
+Filters
+-------
+
+.. autoclass:: apps.credits.filters.OrderFilter
+    :members: filter_by_period
+    :exclude-members: base_filters, declared_filters
+    :no-index:
+
+Views
+-----
+
+.. autoclass:: apps.credits.views.DashboardView
+    :members: get_config, get_form, get_total_approved_orders
+    :no-index:
+
+.. autoclass:: apps.credits.views.CreditWizard
+    :members: get_form_list, get_template_names, done
+    :no-index:
+
+Context Processors
+------------------
+
+.. automodule:: apps.credits.context_processors
+   :members:
+   :undoc-members:
+
+Signals
+-------
+
+.. automodule:: apps.credits.signals
+   :members:
+   :undoc-members:
+
+Приклади використання
+---------------------
+
+Створення заявки
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from apps.credits.models import CreditApplication
+
+    application = CreditApplication.objects.create(
+        user=request.user,
+        gender="Male",
+        married="Yes",
+        dependents=2,
+        education="Graduate",
+        self_employed="No",
+        applicant_income=5000.00,
+        coapplicant_income=2000.00,
+        loan_amount=150000.00,
+        loan_amount_term=360,
+        credit_history=1.0,
+        property_area="Urban",
+        prediction_result=True
+    )
+
+Використання Wizard
+~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from apps.credits.views import CreditWizard
+    from django.urls import path
+
+    urlpatterns = [
+        path('apply/', CreditWizard.as_view(), name='apply'),
+    ]
+
+Фільтрація заявок
+~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from apps.credits.filters import OrderFilter
+
+    # Отримання заявок за період
+    filterset = OrderFilter(
+        {'period': 'today'},
+        queryset=CreditApplication.objects.all()
+    )
+
+    today_applications = filterset.qs
+
+Зміна режиму прогнозування
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from apps.credits.models import PredictionConfig
+
+    config = PredictionConfig.objects.get(id=1)
+    config.active_mode = 'mode2'
+    config.save()

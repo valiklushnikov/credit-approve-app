@@ -1,0 +1,51 @@
+Представлення (Views)
+=====================
+
+Модуль accounts
+---------------
+
+.. automodule:: apps.accounts.views
+   :members:
+   :undoc-members:
+
+Модуль credits
+--------------
+
+DashboardView
+~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.views.DashboardView
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+CreditWizard
+~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.views.CreditWizard
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+DeleteOrderView
+~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.views.DeleteOrderView
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+UserOrdersView
+~~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.views.UserOrdersView
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Модуль analytics
+----------------
+
+.. automodule:: apps.analytics.views
+   :members:
+   :undoc-members:

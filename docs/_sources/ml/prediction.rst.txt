@@ -1,0 +1,126 @@
+Модуль прогнозування
+====================
+
+.. automodule:: ml.prediction
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+EnsemblePredictor
+-----------------
+
+.. autoclass:: ml.prediction.EnsemblePredictor
+   :members:
+   :special-members: __init__
+   :undoc-members:
+   :show-inheritance:
+
+Константи
+---------
+
+.. data:: ml.prediction.BASE_DIR
+
+   Базова директорія проекту
+
+.. data:: ml.prediction.MODEL_DIR
+
+   Директорія зі збереженими ML моделями
+
+.. data:: ml.prediction.MODEL_WITH_CH
+
+   Шлях до моделі з кредитною історією
+
+.. data:: ml.prediction.MODEL_WITHOUT_CH
+
+   Шлях до моделі без кредитної історії
+
+Приклад використання
+--------------------
+
+.. code-block:: python
+
+    from ml.prediction import EnsemblePredictor, MODEL_WITH_CH, MODEL_WITHOUT_CH
+
+    # Ініціалізація предиктора
+    predictor = EnsemblePredictor(MODEL_WITH_CH, MODEL_WITHOUT_CH)
+
+    # Дані заявки
+    data = {
+        "gender": "Male",
+        "married": "Yes",
+        "dependents": 2,
+        "education": "Graduate",
+        "self_employed": "No",
+        "applicant_income": 5000.00,
+        "coapplicant_income": 2000.00,
+        "loan_amount": 150000.00,
+        "loan_amount_term": 360,
+        "credit_history": 1.0,
+        "property_area": "Urban"
+    }
+
+    # Mode 1: Тільки Model B
+    result_mode1 = predictor.predict(data, method="mode1")
+    print(f"Mode 1: {result_mode1}")  # 0 або 1
+
+    # Mode 2: Тільки Model A
+    result_mode2 = predictor.predict(data, method="mode2")
+    print(f"Mode 2: {result_mode2}")
+
+    # Mode 3: Ансамбль
+    result_mode3 = predictor.predict(data, method="mode3")
+    print(f"Mode 3: {result_mode3}")
+
+Детальний процес прогнозування
+-------------------------------
+
+Mode 1 (з кредитною історією)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Перетворення даних через ``transform_input()``
+2. Створення DataFrame з 11 ознаками
+3. Виклик ``model_B.predict_proba()``
+4. Отримання ймовірності класу 1
+5. Порівняння з порогом 0.5
+6. Повернення бінарного результату
+
+Mode 2 (без кредитної історії)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Перетворення даних через ``transform_input()``
+2. Створення DataFrame з 10 базових ознак
+3. Додавання 4 інженерних ознак:
+
+   - Total_Income
+   - Income_to_Loan
+   - Loan_per_Term
+   - Is_Graduate_and_Employed
+
+4. Виклик ``model_A.predict_proba()``
+5. Отримання ймовірності класу 1
+6. Порівняння з порогом 0.35 (знижений для збільшення recall)
+7. Повернення бінарного результату
+
+Mode 3 (ансамбль)
+~~~~~~~~~~~~~~~~~
+
+1. Виконання прогнозування для обох моделей
+2. Отримання ймовірностей від model_A та model_B
+3. Обчислення середнього арифметичного
+4. Порівняння з порогом 0.5
+5. Повернення бінарного результату
+
+Обробка помилок
+---------------
+
+.. code-block:: python
+
+    try:
+        predictor = EnsemblePredictor(MODEL_WITH_CH, MODEL_WITHOUT_CH)
+    except FileNotFoundError as e:
+        print(f"Файл моделі не знайдено: {e}")
+
+    try:
+        result = predictor.predict(data, method="invalid_mode")
+    except ValueError as e:
+        print(f"Невірний метод: {e}")

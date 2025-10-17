@@ -5,6 +5,12 @@ from .models import PredictionConfig, CreditApplication
 
 
 class Step1Form(forms.Form):
+    """
+        Форма першого кроку: вибір статі заявника.
+
+        Поля:
+            gender: Стать заявника (Чоловік/Жінка)
+    """
     gender = forms.ChoiceField(
         label="Gender",
         required=True,
@@ -23,6 +29,12 @@ class Step1Form(forms.Form):
 
 
 class Step2Form(forms.Form):
+    """
+       Форма другого кроку: вибір сімейного стану заявника.
+
+       Поля:
+           married: Сімейний стан (Одружений/Неодружений)
+    """
     married = forms.ChoiceField(
         label="Married",
         required=True,
@@ -41,6 +53,12 @@ class Step2Form(forms.Form):
 
 
 class Step3Form(forms.Form):
+    """
+       Форма третього кроку: вказання кількості утриманців.
+
+       Поля:
+           dependents: Кількість утриманців (мінімум 0)
+    """
     dependents = forms.IntegerField(
         label="Dependents",
         required=True,
@@ -52,6 +70,12 @@ class Step3Form(forms.Form):
 
 
 class Step4Form(forms.Form):
+    """
+       Форма четвертого кроку: вибір рівня освіти заявника.
+
+       Поля:
+           education: Рівень освіти (Випускник/Не випускник)
+    """
     education = forms.ChoiceField(
         label="Education",
         required=True,
@@ -70,6 +94,12 @@ class Step4Form(forms.Form):
 
 
 class Step5Form(forms.Form):
+    """
+        Форма п'ятого кроку: вказання статусу самозайнятості.
+
+        Поля:
+            self_employed: Чи є заявник самозайнятим (Так/Ні)
+    """
     self_employed = forms.ChoiceField(
         label="Self Employed",
         required=True,
@@ -88,6 +118,12 @@ class Step5Form(forms.Form):
 
 
 class Step6Form(forms.Form):
+    """
+        Форма шостого кроку: вказання доходу заявника.
+
+        Поля:
+            applicant_income: Дохід заявника (мінімум 0.00)
+    """
     applicant_income = forms.DecimalField(
         label="Applicant Income",
         required=True,
@@ -106,6 +142,12 @@ class Step6Form(forms.Form):
 
 
 class Step7Form(forms.Form):
+    """
+       Форма сьомого кроку: вказання доходу співзаявника.
+
+       Поля:
+           coapplicant_income: Дохід співзаявника (мінімум 0.00)
+    """
     coapplicant_income = forms.DecimalField(
         label="CoApplicant Income",
         required=True,
@@ -124,6 +166,12 @@ class Step7Form(forms.Form):
 
 
 class Step8Form(forms.Form):
+    """
+      Форма восьмого кроку: вказання суми кредиту.
+
+      Поля:
+          loan_amount: Сума кредиту (мінімум 0.00)
+    """
     loan_amount = forms.DecimalField(
         label="Loan Amount",
         required=True,
@@ -142,6 +190,12 @@ class Step8Form(forms.Form):
 
 
 class Step9Form(forms.Form):
+    """
+        Форма дев'ятого кроку: вказання терміну кредиту.
+
+        Поля:
+            loan_amount_term: Термін кредиту в місяцях (від 0 до 360)
+    """
     loan_amount_term = forms.IntegerField(
         label="Loan Amount Term",
         required=True,
@@ -157,6 +211,12 @@ class Step9Form(forms.Form):
 
 
 class Step10Form(forms.Form):
+    """
+        Форма десятого кроку: вказання кредитної історії.
+
+        Поля:
+            credit_history: Наявність кредитної історії (1.0 - є, 0.0 - немає)
+    """
     credit_history = forms.TypedChoiceField(
         label="Credit History",
         required=True,
@@ -176,6 +236,12 @@ class Step10Form(forms.Form):
 
 
 class Step11Form(forms.Form):
+    """
+        Форма одинадцятого кроку: вибір місцезнаходження нерухомості.
+
+        Поля:
+            property_area: Тип місцевості (Сільська/Міська/Напівміська)
+    """
     property_area = forms.ChoiceField(
         label="Property Area",
         required=True,
@@ -195,6 +261,14 @@ class Step11Form(forms.Form):
 
 
 class PredictionConfigForm(forms.ModelForm):
+    """
+        Форма для налаштування конфігурації прогнозування.
+
+        Дозволяє адміністратору змінювати активний режим роботи системи прогнозування.
+
+        Поля:
+            active_mode: Активний режим роботи системи, за замовчуванням "mode1".
+    """
     active_mode = forms.ChoiceField(
         label="Active Mode",
         widget=forms.Select(
@@ -213,6 +287,15 @@ class PredictionConfigForm(forms.ModelForm):
 
 
 class UpdateStatusForm(forms.ModelForm):
+    """
+       Форма для оновлення статусу кредитної заявки.
+
+       Дозволяє адміністратору змінювати результат прогнозування заявки
+       (скасовано або завершено).
+
+       Поля:
+           prediction_result: Статус заявки (0 - Скасовано, 1 - Завершено)
+    """
     prediction_result = forms.ChoiceField(
         label="Order Status",
         widget=forms.Select(
@@ -233,5 +316,11 @@ class UpdateStatusForm(forms.ModelForm):
         fields = ["prediction_result"]
 
     def clean_prediction_result(self):
+        """
+            Перетворює значення статусу заявки на булеве значення.
+
+            Returns:
+                bool: True для завершеної заявки, False для скасованої
+        """
         value = self.cleaned_data["prediction_result"]
         return bool(int(value))

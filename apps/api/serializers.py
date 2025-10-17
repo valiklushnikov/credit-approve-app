@@ -3,6 +3,24 @@ from ml.data_transform import transform_input
 
 
 class UserInfoWithoutCreditHistorySerializer(serializers.Serializer):
+    """
+    Серіалізатор для даних користувача без кредитної історії (mode2).
+
+    Використовується для валідації та обробки даних кредитної заявки
+    в режимі прогнозування без урахування кредитної історії.
+
+    Поля:
+        gender: Стать заявника (Чоловік/Жінка)
+        married: Сімейний стан (Одружений/Неодружений)
+        dependents: Кількість утриманців (мінімум 0)
+        education: Рівень освіти (Випускник/Не випускник)
+        self_employed: Статус самозайнятості (Так/Ні)
+        applicant_income: Дохід заявника (мінімум 0.00)
+        coapplicant_income: Дохід співзаявника (мінімум 0.00)
+        loan_amount: Сума кредиту (мінімум 0.00)
+        loan_amount_term: Термін кредиту в місяцях (мінімум 1)
+        property_area: Тип місцевості (Міська/Напівміська/Сільська)
+    """
     GENDER_CHOICES = [
         ("Male", "Male"),
         ("Female", "Female"),
@@ -59,6 +77,16 @@ class UserInfoWithoutCreditHistorySerializer(serializers.Serializer):
 
 
 class UserInfoWithCreditHistorySerializer(UserInfoWithoutCreditHistorySerializer):
+    """
+       Серіалізатор для даних користувача з кредитною історією (mode1).
+
+       Розширює UserInfoWithoutCreditHistorySerializer додатковим полем
+       для кредитної історії. Використовується в режимі прогнозування
+       з урахуванням кредитної історії.
+
+       Додаткові поля:
+           credit_history: Наявність кредитної історії (Так/Ні)
+    """
     CREDIT_HISTORY_CHOICES = [
         ("Yes", "Yes"),
         ("No", "No"),
@@ -71,6 +99,15 @@ class UserInfoWithCreditHistorySerializer(UserInfoWithoutCreditHistorySerializer
         )
 
     def validate_credit_history(self, value):
+        """
+            Перетворює текстове значення кредитної історії на числове.
+
+            Args:
+                value (str): Значення кредитної історії ("Yes" або "No")
+
+            Returns:
+                float: 1.0 для "Yes", 0.0 для "No"
+        """
         mapping = {
             "Yes": 1.0,
             "No": 0.0,

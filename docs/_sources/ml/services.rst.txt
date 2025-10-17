@@ -1,0 +1,181 @@
+Модуль сервісів
+===============
+
+.. automodule:: ml.services
+   :members:
+   :undoc-members:
+
+Функція get_ensemble()
+-----------------------
+
+.. autofunction:: ml.services.get_ensemble
+
+Патерн Singleton
+----------------
+
+Функція ``get_ensemble()`` реалізує патерн Singleton для ефективного
+використання пам'яті та швидкого доступу до ML моделей.
+
+Переваги Singleton
+~~~~~~~~~~~~~~~~~~
+
+1. **Економія пам'яті**
+
+   - Моделі завантажуються один раз
+   - Всі запити використовують один екземпляр
+
+2. **Швидкість**
+
+   - Перший запит: ~2-3 секунди (завантаження моделей)
+   - Наступні запити: миттєво
+
+
+Діаграма життєвого циклу
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: text
+
+    Перший виклик:
+    ┌──────────────────┐
+    │ get_ensemble()   │
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ ensemble == None?│
+    │      YES         │
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ Імпорт модулів   │
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ Завантаження     │
+    │ MODEL_WITH_CH    │
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ Завантаження     │
+    │ MODEL_WITHOUT_CH │
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ Створення        │
+    │ EnsemblePredictor│
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ Збереження в     │
+    │ global ensemble  │
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ Повернення       │
+    │ ensemble         │
+    └──────────────────┘
+
+    Наступні виклики:
+    ┌──────────────────┐
+    │ get_ensemble()   │
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ ensemble == None?│
+    │      NO          │
+    └────────┬─────────┘
+             │
+             ▼
+    ┌──────────────────┐
+    │ Повернення       │
+    │ існуючого        │
+    │ ensemble         │
+    └──────────────────┘
+
+Приклад використання
+--------------------
+
+В Django views:
+
+.. code-block:: python
+
+    from ml.services import get_ensemble
+
+    def predict_view(request):
+        # Отримання предиктора (швидко)
+        predictor = get_ensemble()
+
+        # Використання
+        data = {...}
+        result = predictor.predict(data, method="mode1")
+
+        return JsonResponse({"prediction": result})
+
+В Django management commands:
+
+.. code-block:: python
+
+    from django.core.management.base import BaseCommand
+    from ml.services import get_ensemble
+
+    class Command(BaseCommand):
+        def handle(self, *args, **options):
+            predictor = get_ensemble()
+            # Batch predictions
+            for data in batch:
+                result = predictor.predict(data)
+                print(f"Result: {result}")
+
+
+Трансформація даних
+-------------------
+
+.. autofunction:: ml.data_transform.transform_input
+
+Маппінг полів
+~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    mapping = {
+        "gender": "Gender",
+        "married": "Married",
+        "dependents": "Dependents",
+        "education": "Education",
+        "self_employed": "Self_Employed",
+        "applicant_income": "ApplicantIncome",
+        "coapplicant_income": "CoapplicantIncome",
+        "loan_amount": "LoanAmount",
+        "loan_amount_term": "Loan_Amount_Term",
+        "credit_history": "Credit_History",
+        "property_area": "Property_Area",
+    }
+
+Приклад трансформації:
+
+.. code-block:: python
+
+    from ml.data_transform import transform_input
+    from decimal import Decimal
+
+    # Вхідні дані (з Django форми)
+    raw_data = {
+        "gender": "Male",
+        "loan_amount": Decimal("150000.00"),
+        "applicant_income": Decimal("5000.00")
+    }
+
+    # Трансформовані дані (для ML моделі)
+    transformed = transform_input(raw_data)
+    {
+        "Gender": "Male",
+        "LoanAmount": 150000.0,
+        "ApplicantIncome": 5000.0
+    }

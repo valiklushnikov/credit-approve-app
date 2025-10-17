@@ -1,0 +1,1426 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="uk" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Моделі Django &mdash; Credits Approve App v1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5bdae8fd" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5bdae8fd" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=25fcb8f5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Індекс" href="genindex.html" />
+    <link rel="search" title="Пошук" href="search.html" />
+    <link rel="next" title="Форми Django" href="forms.html" />
+    <link rel="prev" title="Архітектура системи" href="architecture.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Credits Approve App
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Початок роботи:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Встановлення</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#id2">Системні вимоги</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#id3">Встановлення та запуск</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#id4">1. Клонування репозиторію</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#id5">2. Налаштування змінних середовища</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#id6">3. Налаштування змінних оточення</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#docker-compose">4. Запуск з Docker Compose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#id7">5. Ініціалізація бази даних</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Швидкий старт</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#id2">Основи роботи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#id3">Вхід в систему</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#id4">Створення кредитної заявки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#api">Робота з API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#id5">Генерація аналітики</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#id6">Адміністрування (тільки для суперкористувача)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#id7">Приклади використання</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#python-sdk">Python SDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart.html#curl">Curl приклад</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Архітектура системи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id2">Огляд</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id3">Компоненти системи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#id4">Структура проекту</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id5">Технологічний стек</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#backend">Backend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#machine-learning">Machine Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#id6">Візуалізація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#deployment">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id7">Потік даних</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id8">Режими прогнозування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#mode-1">Mode 1: З кредитною історією</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#mode-2">Mode 2: Без кредитної історії</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#mode-3">Mode 3: Ансамбль</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id9">База даних</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#id10">Основні таблиці</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id11">Безпека</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id12">Масштабування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#id13">Горизонтальне</a></li>
+<li class="toctree-l3"><a class="reference internal" href="architecture.html#id14">Вертикальне</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id15">Моніторинг</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Документація:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Моделі Django</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#accounts">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-apps.accounts.models">User</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#apps.accounts.models.UserManager"><code class="docutils literal notranslate"><span class="pre">UserManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#apps.accounts.models.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#usermanager">UserManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">UserManager</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creditapplication">CreditApplication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#apps.credits.models.CreditApplication"><code class="docutils literal notranslate"><span class="pre">CreditApplication</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#predictionconfig">PredictionConfig</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#apps.credits.models.PredictionConfig"><code class="docutils literal notranslate"><span class="pre">PredictionConfig</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#analytics">Модуль analytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analyticgraph">AnalyticGraph</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#apps.analytics.models.AnalyticGraph"><code class="docutils literal notranslate"><span class="pre">AnalyticGraph</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="forms.html">Форми Django</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forms.html#accounts">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="forms.html#loginform">LoginForm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.accounts.forms.LoginForm"><code class="docutils literal notranslate"><span class="pre">LoginForm</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="forms.html#registerform">RegisterForm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.accounts.forms.RegisterForm"><code class="docutils literal notranslate"><span class="pre">RegisterForm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="forms.html#wizard-1-11">Форми wizard-а (кроки 1-11)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step1Form"><code class="docutils literal notranslate"><span class="pre">Step1Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step2Form"><code class="docutils literal notranslate"><span class="pre">Step2Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step3Form"><code class="docutils literal notranslate"><span class="pre">Step3Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step4Form"><code class="docutils literal notranslate"><span class="pre">Step4Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step5Form"><code class="docutils literal notranslate"><span class="pre">Step5Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step6Form"><code class="docutils literal notranslate"><span class="pre">Step6Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step7Form"><code class="docutils literal notranslate"><span class="pre">Step7Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step8Form"><code class="docutils literal notranslate"><span class="pre">Step8Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step9Form"><code class="docutils literal notranslate"><span class="pre">Step9Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step10Form"><code class="docutils literal notranslate"><span class="pre">Step10Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.Step11Form"><code class="docutils literal notranslate"><span class="pre">Step11Form</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="forms.html#id1">Адміністративні форми</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.PredictionConfigForm"><code class="docutils literal notranslate"><span class="pre">PredictionConfigForm</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.forms.UpdateStatusForm"><code class="docutils literal notranslate"><span class="pre">UpdateStatusForm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="forms.html#id2">Фільтри</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="forms.html#apps.credits.filters.OrderFilter"><code class="docutils literal notranslate"><span class="pre">OrderFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.filters.OrderFilter.PERIOD_CHOICES"><code class="docutils literal notranslate"><span class="pre">OrderFilter.PERIOD_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.filters.OrderFilter.Meta"><code class="docutils literal notranslate"><span class="pre">OrderFilter.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.filters.OrderFilter.filter_by_period"><code class="docutils literal notranslate"><span class="pre">OrderFilter.filter_by_period()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.filters.OrderFilter.base_filters"><code class="docutils literal notranslate"><span class="pre">OrderFilter.base_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="forms.html#apps.credits.filters.OrderFilter.declared_filters"><code class="docutils literal notranslate"><span class="pre">OrderFilter.declared_filters</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Представлення (Views)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views.html#module-apps.accounts.views">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="views.html#apps.accounts.views.user_login"><code class="docutils literal notranslate"><span class="pre">user_login()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="views.html#apps.accounts.views.user_register"><code class="docutils literal notranslate"><span class="pre">user_register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="views.html#apps.accounts.views.user_logout"><code class="docutils literal notranslate"><span class="pre">user_logout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="views.html#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="views.html#dashboardview">DashboardView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.credits.views.DashboardView"><code class="docutils literal notranslate"><span class="pre">DashboardView</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views.html#creditwizard">CreditWizard</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.credits.views.CreditWizard"><code class="docutils literal notranslate"><span class="pre">CreditWizard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views.html#deleteorderview">DeleteOrderView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.credits.views.DeleteOrderView"><code class="docutils literal notranslate"><span class="pre">DeleteOrderView</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views.html#userordersview">UserOrdersView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.credits.views.UserOrdersView"><code class="docutils literal notranslate"><span class="pre">UserOrdersView</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="views.html#module-apps.analytics.views">Модуль analytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="views.html#apps.analytics.views.analytics"><code class="docutils literal notranslate"><span class="pre">analytics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="views.html#apps.analytics.views.AnalyticGraphDetailView"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.analytics.views.AnalyticGraphDetailView.model"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.analytics.views.AnalyticGraphDetailView.context_object_name"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.context_object_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.analytics.views.AnalyticGraphDetailView.template_name"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.template_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.analytics.views.AnalyticGraphDetailView.slug_field"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.slug_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="views.html#apps.analytics.views.AnalyticGraphDetailView.slug_url_kwarg"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.slug_url_kwarg</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="views.html#apps.analytics.views.collect_stats_view"><code class="docutils literal notranslate"><span class="pre">collect_stats_view()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">REST API Довідник</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id1">Огляд</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#base-url">Base URL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#id2">Автентифікація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#id3">Формат відповіді</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#endpoints">Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-get-predict">POST /api/get_predict/</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#module-apps.api.serializers">Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.GENDER_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.GENDER_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.MARRIED_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.MARRIED_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.EDUCATION_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.EDUCATION_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.SELF_EMPLOYED_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.SELF_EMPLOYED_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.PROPERTY_AREA_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.PROPERTY_AREA_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.CREDIT_HISTORY_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.CREDIT_HISTORY_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.validate_credit_history"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.validate_credit_history()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#module-apps.api.views">Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#apps.api.views.get_predict"><code class="docutils literal notranslate"><span class="pre">get_predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Machine Learning:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ml/index.html">Machine Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml/index.html#ml">Огляд ML компонентів</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/index.html#id1">Моделі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/index.html#id2">Підмодулі</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html">Модуль прогнозування</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#ml.prediction.EnsemblePredictor"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#ensemblepredictor">EnsemblePredictor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id8">Константи</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id9">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id10">Детальний процес прогнозування</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id11">Обробка помилок</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ml/analytics.html">Модуль аналітики</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml/analytics.html#get-analytics">Функція get_analytics()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/analytics.html#id2">Опис процесу</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/analytics.html#id3">Типи графіків</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/analytics.html#id4">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/analytics.html#id5">Результати</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/analytics.html#id6">Логування</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/analytics.html#id7">Налаштування візуалізації</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ml/services.html">Модуль сервісів</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml/services.html#ml.services.get_ensemble"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/services.html#get-ensemble">Функція get_ensemble()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/services.html#singleton">Патерн Singleton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/services.html#id4">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/services.html#id5">Трансформація даних</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/index.html#id3">Ознаки моделей</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/index.html#id4">Базові ознаки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/index.html#model-a">Інженерні ознаки (Model A)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/index.html#id5">Потік ML прогнозування</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/index.html#id6">Метрики моделей</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/index.html#id7">Model A (без кредитної історії)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/index.html#model-b">Model B (з кредитною історією)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/index.html#ensemble">Ensemble</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml/prediction.html">Модуль прогнозування</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml/prediction.html#ml.prediction.EnsemblePredictor"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.EnsemblePredictor.model_B"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_B</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.EnsemblePredictor.model_A"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_A</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.EnsemblePredictor.features_B"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_B</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.EnsemblePredictor.features_A"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_A</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.EnsemblePredictor.__init__"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.EnsemblePredictor.predict"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/prediction.html#ensemblepredictor">EnsemblePredictor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#id0"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id2"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_B</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id3"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_A</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id4"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_B</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id5"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_A</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id6"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="ml/prediction.html#id7"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/prediction.html#id8">Константи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.ml.prediction.BASE_DIR"><code class="docutils literal notranslate"><span class="pre">ml.prediction.BASE_DIR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.ml.prediction.MODEL_DIR"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_DIR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.ml.prediction.MODEL_WITH_CH"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_WITH_CH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#ml.prediction.ml.prediction.MODEL_WITHOUT_CH"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_WITHOUT_CH</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/prediction.html#id9">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/prediction.html#id10">Детальний процес прогнозування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#mode-1">Mode 1 (з кредитною історією)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#mode-2">Mode 2 (без кредитної історії)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/prediction.html#mode-3">Mode 3 (ансамбль)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/prediction.html#id11">Обробка помилок</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml/analytics.html">Модуль аналітики</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml/analytics.html#get-analytics">Функція get_analytics()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/analytics.html#ml.analytics.analytics_creator.get_analytics"><code class="docutils literal notranslate"><span class="pre">get_analytics()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/analytics.html#id2">Опис процесу</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/analytics.html#id3">Типи графіків</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/analytics.html#id4">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/analytics.html#id5">Результати</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/analytics.html#id6">Логування</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/analytics.html#id7">Налаштування візуалізації</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml/services.html">Модуль сервісів</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml/services.html#ml.services.get_ensemble"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/services.html#get-ensemble">Функція get_ensemble()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/services.html#id0"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/services.html#singleton">Патерн Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/services.html#id2">Переваги Singleton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/services.html#id3">Діаграма життєвого циклу</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ml/services.html#id4">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml/services.html#id5">Трансформація даних</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ml/services.html#ml.data_transform.transform_input"><code class="docutils literal notranslate"><span class="pre">transform_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ml/services.html#id6">Маппінг полів</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Розгортання:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deployment/docker.html">Розгортання через Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#id1">Огляд</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#id2">Сервіси</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#id3">Структура файлів</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#dockerfile">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#docker-compose">Docker Compose</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment/docker.html#volumes">Volumes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#entrypoint-scripts">Entrypoint Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#id4">Запуск</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment/docker.html#id5">Перший запуск</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/docker.html#id6">Звичайний запуск</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#id7">Команди управління</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment/docker.html#id8">Міграції</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/docker.html#id9">Створення суперкористувача</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/docker.html#id10">Збір статичних файлів</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/docker.html#shell">Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/docker.html#id11">Доступ до БД</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#id12">Оновлення</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#id13">Налагодження</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/docker.html#production">Production налаштування</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment/production.html">Production розгортання</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment/production.html#id1">Підготовка</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment/production.html#securitychecklist">1. SecurityChecklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/production.html#id2">2. Змінні оточення</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/production.html#ssl-tls">3. SSL/TLS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/production.html#id3">Оптимізація</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment/production.html#gunicorn">1. Gunicorn налаштування</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/production.html#postgresql">2. PostgreSQL оптимізація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/production.html#id4">3. Кешування</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment/production.html#id5">4. Статичні файли</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/production.html#id6">Моніторинг</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment/production.html#id7">1. Логування</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Credits Approve App</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Моделі Django</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="django">
+<h1>Моделі Django<a class="headerlink" href="#django" title="Link to this heading"></a></h1>
+<section id="accounts">
+<h2>Модуль accounts<a class="headerlink" href="#accounts" title="Link to this heading"></a></h2>
+<section id="module-apps.accounts.models">
+<span id="user"></span><h3>User<a class="headerlink" href="#module-apps.accounts.models" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.accounts.models.UserManager">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.accounts.models.</span></span><span class="sig-name descname"><span class="pre">UserManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/accounts/models.html#UserManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#apps.accounts.models.UserManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseUserManager</span></code></p>
+<p>Менеджер для створення користувачів та суперкористувачів.</p>
+<p>Менеджер користувача, що розширює BaseUserManager для роботи
+з кастомною моделлю User, яка використовує email замість username
+як ідентифікатор.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.accounts.models.UserManager.create_user">
+<span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_fields</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/accounts/models.html#UserManager.create_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#apps.accounts.models.UserManager.create_user" title="Link to this definition"></a></dt>
+<dd><p>Створює звичайного користувача.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Email адресу користувача (має бути унікальною).</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Пароль користувача. Defaults to None.</p></li>
+<li><p><strong>**extra_fields</strong> – Додаткові поля для моделі User.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Створений об’єкт користувача.</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#apps.accounts.models.User" title="apps.accounts.models.User">User</a></p>
+</dd>
+<dt class="field-even">Викликає<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – Якщо email не надано.</p>
+</dd>
+</dl>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user</span> <span class="o">=</span> <span class="n">UserManager</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span>
+<span class="gp">... </span><span class="n">email</span><span class="o">=</span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="n">password</span><span class="o">=</span><span class="s2">&quot;secure_password&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.accounts.models.UserManager.create_superuser">
+<span class="sig-name descname"><span class="pre">create_superuser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_fields</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/accounts/models.html#UserManager.create_superuser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#apps.accounts.models.UserManager.create_superuser" title="Link to this definition"></a></dt>
+<dd><p>Створює суперкористувача (адміністратора).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Email адреса адміністратора.</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Пароль адміністратора. Defaults to None.</p></li>
+<li><p><strong>**extra_fields</strong> – Додаткові поля для моделі User.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Створений об’єкт суперкористувача.</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#apps.accounts.models.User" title="apps.accounts.models.User">User</a></p>
+</dd>
+</dl>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">admin</span> <span class="o">=</span> <span class="n">UserManager</span><span class="o">.</span><span class="n">create_superuser</span><span class="p">(</span>
+<span class="gp">... </span><span class="n">email</span><span class="o">=</span><span class="s2">&quot;admin@example.com&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="n">password</span><span class="o">=</span><span class="s2">&quot;admin_password&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.accounts.models.User">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.accounts.models.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/accounts/models.html#User"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#apps.accounts.models.User" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBaseUser</span></code>, <a class="reference external" href="https://docs.djangoproject.com/en/5.2/topics/auth/customizing/#django.contrib.auth.models.PermissionsMixin" title="(in Django v5.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">PermissionsMixin</span></code></a></p>
+<p>Модель користувача системи.</p>
+<p>Використовує email як унікальний ідентифікатор замість username.
+Наслідує AbstractBaseUser для кастомізації аутентифікації.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#apps.accounts.models.User.email" title="Link to this definition"></a></dt>
+<dd><p>Унікальна email адреса</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">EmailField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.username">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#apps.accounts.models.User.username" title="Link to this definition"></a></dt>
+<dd><p>Унікальне ім’я користувача</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.is_staff">
+<span class="sig-name descname"><span class="pre">is_staff</span></span><a class="headerlink" href="#apps.accounts.models.User.is_staff" title="Link to this definition"></a></dt>
+<dd><p>Чи є користувач співробітником</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.is_superuser">
+<span class="sig-name descname"><span class="pre">is_superuser</span></span><a class="headerlink" href="#apps.accounts.models.User.is_superuser" title="Link to this definition"></a></dt>
+<dd><p>Чи є користувач суперадміністратором</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.is_active">
+<span class="sig-name descname"><span class="pre">is_active</span></span><a class="headerlink" href="#apps.accounts.models.User.is_active" title="Link to this definition"></a></dt>
+<dd><p>Чи активний обліковий запис</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.date_joined">
+<span class="sig-name descname"><span class="pre">date_joined</span></span><a class="headerlink" href="#apps.accounts.models.User.date_joined" title="Link to this definition"></a></dt>
+<dd><p>Дата реєстрації</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DateTimeField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">is_staff</span></span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">is_superuser</span></span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">is_active</span></span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">date_joined</span></span><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.USERNAME_FIELD">
+<span class="sig-name descname"><span class="pre">USERNAME_FIELD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'email'</span></em><a class="headerlink" href="#apps.accounts.models.User.USERNAME_FIELD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.REQUIRED_FIELDS">
+<span class="sig-name descname"><span class="pre">REQUIRED_FIELDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['username']</span></em><a class="headerlink" href="#apps.accounts.models.User.REQUIRED_FIELDS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.credits">
+<span class="sig-name descname"><span class="pre">credits</span></span><a class="headerlink" href="#apps.accounts.models.User.credits" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.accounts.models.User.get_next_by_date_joined">
+<span class="sig-name descname"><span class="pre">get_next_by_date_joined</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date_joined&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.accounts.models.User.get_next_by_date_joined" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.accounts.models.User.get_previous_by_date_joined">
+<span class="sig-name descname"><span class="pre">get_previous_by_date_joined</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date_joined&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.accounts.models.User.get_previous_by_date_joined" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.groups">
+<span class="sig-name descname"><span class="pre">groups</span></span><a class="headerlink" href="#apps.accounts.models.User.groups" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.last_login">
+<span class="sig-name descname"><span class="pre">last_login</span></span><a class="headerlink" href="#apps.accounts.models.User.last_login" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.logentry_set">
+<span class="sig-name descname"><span class="pre">logentry_set</span></span><a class="headerlink" href="#apps.accounts.models.User.logentry_set" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.password">
+<span class="sig-name descname"><span class="pre">password</span></span><a class="headerlink" href="#apps.accounts.models.User.password" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.accounts.models.User.user_permissions">
+<span class="sig-name descname"><span class="pre">user_permissions</span></span><a class="headerlink" href="#apps.accounts.models.User.user_permissions" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the forward and reverse sides of
+a many-to-many relation.</p>
+<p>In the example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Pizza</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">toppings</span> <span class="o">=</span> <span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Topping</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;pizzas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pizza.toppings</span></code> and <code class="docutils literal notranslate"><span class="pre">Topping.pizzas</span></code> are <code class="docutils literal notranslate"><span class="pre">ManyToManyDescriptor</span></code>
+instances.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="usermanager">
+<h3>UserManager<a class="headerlink" href="#usermanager" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="id6">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.accounts.models.</span></span><span class="sig-name descname"><span class="pre">UserManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/accounts/models.html#UserManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseUserManager</span></code></p>
+<p>Менеджер для створення користувачів та суперкористувачів.</p>
+<p>Менеджер користувача, що розширює BaseUserManager для роботи
+з кастомною моделлю User, яка використовує email замість username
+як ідентифікатор.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_fields</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/accounts/models.html#UserManager.create_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Створює звичайного користувача.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Email адресу користувача (має бути унікальною).</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Пароль користувача. Defaults to None.</p></li>
+<li><p><strong>**extra_fields</strong> – Додаткові поля для моделі User.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Створений об’єкт користувача.</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#apps.accounts.models.User" title="apps.accounts.models.User">User</a></p>
+</dd>
+<dt class="field-even">Викликає<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – Якщо email не надано.</p>
+</dd>
+</dl>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">user</span> <span class="o">=</span> <span class="n">UserManager</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span>
+<span class="gp">... </span><span class="n">email</span><span class="o">=</span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="n">password</span><span class="o">=</span><span class="s2">&quot;secure_password&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-name descname"><span class="pre">create_superuser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_fields</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/accounts/models.html#UserManager.create_superuser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id8" title="Link to this definition"></a></dt>
+<dd><p>Створює суперкористувача (адміністратора).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Email адреса адміністратора.</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Пароль адміністратора. Defaults to None.</p></li>
+<li><p><strong>**extra_fields</strong> – Додаткові поля для моделі User.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Створений об’єкт суперкористувача.</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#apps.accounts.models.User" title="apps.accounts.models.User">User</a></p>
+</dd>
+</dl>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">admin</span> <span class="o">=</span> <span class="n">UserManager</span><span class="o">.</span><span class="n">create_superuser</span><span class="p">(</span>
+<span class="gp">... </span><span class="n">email</span><span class="o">=</span><span class="s2">&quot;admin@example.com&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="n">password</span><span class="o">=</span><span class="s2">&quot;admin_password&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="credits">
+<h2>Модуль credits<a class="headerlink" href="#credits" title="Link to this heading"></a></h2>
+<section id="creditapplication">
+<h3>CreditApplication<a class="headerlink" href="#creditapplication" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.models.</span></span><span class="sig-name descname"><span class="pre">CreditApplication</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/credits/models.html#CreditApplication"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#apps.credits.models.CreditApplication" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Модель кредитної заявки користувача.</p>
+<p>Зберігає всю інформацію про заявку на кредит та результат
+прогнозування від ML моделі.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.user" title="Link to this definition"></a></dt>
+<dd><p>Користувач, який подав заявку</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.gender">
+<span class="sig-name descname"><span class="pre">gender</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.gender" title="Link to this definition"></a></dt>
+<dd><p>Стать заявника</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.married">
+<span class="sig-name descname"><span class="pre">married</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.married" title="Link to this definition"></a></dt>
+<dd><p>Сімейний стан</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.dependents">
+<span class="sig-name descname"><span class="pre">dependents</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.dependents" title="Link to this definition"></a></dt>
+<dd><p>Кількість утриманців</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PositiveIntegerField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.education">
+<span class="sig-name descname"><span class="pre">education</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.education" title="Link to this definition"></a></dt>
+<dd><p>Рівень освіти</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.self_employed">
+<span class="sig-name descname"><span class="pre">self_employed</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.self_employed" title="Link to this definition"></a></dt>
+<dd><p>Чи є самозайнятим</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.applicant_income">
+<span class="sig-name descname"><span class="pre">applicant_income</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.applicant_income" title="Link to this definition"></a></dt>
+<dd><p>Дохід заявника</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DecimalField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.coapplicant_income">
+<span class="sig-name descname"><span class="pre">coapplicant_income</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.coapplicant_income" title="Link to this definition"></a></dt>
+<dd><p>Дохід співзаявника</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DecimalField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.loan_amount">
+<span class="sig-name descname"><span class="pre">loan_amount</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.loan_amount" title="Link to this definition"></a></dt>
+<dd><p>Сума кредиту</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DecimalField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.loan_amount_term">
+<span class="sig-name descname"><span class="pre">loan_amount_term</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.loan_amount_term" title="Link to this definition"></a></dt>
+<dd><p>Термін кредиту (місяці)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PositiveIntegerField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.credit_history">
+<span class="sig-name descname"><span class="pre">credit_history</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.credit_history" title="Link to this definition"></a></dt>
+<dd><p>Наявність кредитної історії (1.0/0.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FloatField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.property_area">
+<span class="sig-name descname"><span class="pre">property_area</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.property_area" title="Link to this definition"></a></dt>
+<dd><p>Тип місцевості (міська/передмістя/сільська)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.prediction_result">
+<span class="sig-name descname"><span class="pre">prediction_result</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.prediction_result" title="Link to this definition"></a></dt>
+<dd><p>Результат прогнозування (схвалено/відхилено)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.created_at" title="Link to this definition"></a></dt>
+<dd><p>Дата створення заявки</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DateTimeField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Модель для зберігання кредитних заявок користувачів.</p>
+<p><strong>Приклад використання:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">apps.credits.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">CreditApplication</span>
+
+<span class="c1"># Створення заявки</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">CreditApplication</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">,</span>
+    <span class="n">gender</span><span class="o">=</span><span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+    <span class="n">married</span><span class="o">=</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+    <span class="n">dependents</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">education</span><span class="o">=</span><span class="s2">&quot;Graduate&quot;</span><span class="p">,</span>
+    <span class="n">self_employed</span><span class="o">=</span><span class="s2">&quot;No&quot;</span><span class="p">,</span>
+    <span class="n">applicant_income</span><span class="o">=</span><span class="mf">5000.00</span><span class="p">,</span>
+    <span class="n">coapplicant_income</span><span class="o">=</span><span class="mf">2000.00</span><span class="p">,</span>
+    <span class="n">loan_amount</span><span class="o">=</span><span class="mf">150000.00</span><span class="p">,</span>
+    <span class="n">loan_amount_term</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span>
+    <span class="n">credit_history</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">property_area</span><span class="o">=</span><span class="s2">&quot;Urban&quot;</span><span class="p">,</span>
+    <span class="n">prediction_result</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.GENDER_CHOICES">
+<span class="sig-name descname"><span class="pre">GENDER_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Male',</span> <span class="pre">'Male'),</span> <span class="pre">('Female',</span> <span class="pre">'Female')]</span></em><a class="headerlink" href="#apps.credits.models.CreditApplication.GENDER_CHOICES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.MARRIED_CHOICES">
+<span class="sig-name descname"><span class="pre">MARRIED_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Yes',</span> <span class="pre">'Yes'),</span> <span class="pre">('No',</span> <span class="pre">'No')]</span></em><a class="headerlink" href="#apps.credits.models.CreditApplication.MARRIED_CHOICES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.EDUCATION_CHOICES">
+<span class="sig-name descname"><span class="pre">EDUCATION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Graduate',</span> <span class="pre">'Graduate'),</span> <span class="pre">('Not</span> <span class="pre">Graduate',</span> <span class="pre">'Not</span> <span class="pre">Graduate')]</span></em><a class="headerlink" href="#apps.credits.models.CreditApplication.EDUCATION_CHOICES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.SELF_EMPLOYED_CHOICES">
+<span class="sig-name descname"><span class="pre">SELF_EMPLOYED_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Yes',</span> <span class="pre">'Yes'),</span> <span class="pre">('No',</span> <span class="pre">'No')]</span></em><a class="headerlink" href="#apps.credits.models.CreditApplication.SELF_EMPLOYED_CHOICES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.PROPERTY_AREA_CHOICES">
+<span class="sig-name descname"><span class="pre">PROPERTY_AREA_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Urban',</span> <span class="pre">'Urban'),</span> <span class="pre">('Semiurban',</span> <span class="pre">'Semiurban'),</span> <span class="pre">('Rural',</span> <span class="pre">'Rural')]</span></em><a class="headerlink" href="#apps.credits.models.CreditApplication.PROPERTY_AREA_CHOICES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#id9" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-name descname"><span class="pre">gender</span></span><a class="headerlink" href="#id10" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id11">
+<span class="sig-name descname"><span class="pre">married</span></span><a class="headerlink" href="#id11" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id12">
+<span class="sig-name descname"><span class="pre">dependents</span></span><a class="headerlink" href="#id12" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id13">
+<span class="sig-name descname"><span class="pre">education</span></span><a class="headerlink" href="#id13" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id14">
+<span class="sig-name descname"><span class="pre">self_employed</span></span><a class="headerlink" href="#id14" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id15">
+<span class="sig-name descname"><span class="pre">applicant_income</span></span><a class="headerlink" href="#id15" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id16">
+<span class="sig-name descname"><span class="pre">coapplicant_income</span></span><a class="headerlink" href="#id16" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id17">
+<span class="sig-name descname"><span class="pre">loan_amount</span></span><a class="headerlink" href="#id17" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id18">
+<span class="sig-name descname"><span class="pre">loan_amount_term</span></span><a class="headerlink" href="#id18" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id19">
+<span class="sig-name descname"><span class="pre">credit_history</span></span><a class="headerlink" href="#id19" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id20">
+<span class="sig-name descname"><span class="pre">property_area</span></span><a class="headerlink" href="#id20" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id21">
+<span class="sig-name descname"><span class="pre">prediction_result</span></span><a class="headerlink" href="#id21" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id22">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#id22" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.get_education_display">
+<span class="sig-name descname"><span class="pre">get_education_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">education&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.CreditApplication.get_education_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.get_gender_display">
+<span class="sig-name descname"><span class="pre">get_gender_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">gender&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.CreditApplication.get_gender_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.get_married_display">
+<span class="sig-name descname"><span class="pre">get_married_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">married&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.CreditApplication.get_married_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.CreditApplication.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.CreditApplication.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.get_property_area_display">
+<span class="sig-name descname"><span class="pre">get_property_area_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">property_area&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.CreditApplication.get_property_area_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.get_self_employed_display">
+<span class="sig-name descname"><span class="pre">get_self_employed_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">self_employed&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.CreditApplication.get_self_employed_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.CreditApplication.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#apps.credits.models.CreditApplication.user_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="predictionconfig">
+<h3>PredictionConfig<a class="headerlink" href="#predictionconfig" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.credits.models.PredictionConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.models.</span></span><span class="sig-name descname"><span class="pre">PredictionConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/credits/models.html#PredictionConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#apps.credits.models.PredictionConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Модель конфігурації режимів прогнозування.</p>
+<p>Зберігає активний режим роботи ML моделі для прогнозування
+схвалення кредитних заявок.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.PredictionConfig.active_mode">
+<span class="sig-name descname"><span class="pre">active_mode</span></span><a class="headerlink" href="#apps.credits.models.PredictionConfig.active_mode" title="Link to this definition"></a></dt>
+<dd><p>Активний режим прогнозування
+- mode1: ModelA з історією кредиту
+- mode2: ModelB без історії кредиту
+- mode3: Ансамбль ModelA+ModelB</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.PredictionConfig.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#apps.credits.models.PredictionConfig.updated_at" title="Link to this definition"></a></dt>
+<dd><p>Дата останнього оновлення</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DateTimeField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Модель для зберігання активного режиму прогнозування.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.credits.models.PredictionConfig.MODE_CHOICES">
+<span class="sig-name descname"><span class="pre">MODE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('mode1',</span> <span class="pre">'ModelA</span> <span class="pre">with</span> <span class="pre">credit</span> <span class="pre">history'),</span> <span class="pre">('mode2',</span> <span class="pre">'ModelB</span> <span class="pre">without</span> <span class="pre">credit</span> <span class="pre">history'),</span> <span class="pre">('mode3',</span> <span class="pre">'ModelA+ModelB')]</span></em><a class="headerlink" href="#apps.credits.models.PredictionConfig.MODE_CHOICES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id23">
+<span class="sig-name descname"><span class="pre">active_mode</span></span><a class="headerlink" href="#id23" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id24">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#id24" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.PredictionConfig.get_active_mode_display">
+<span class="sig-name descname"><span class="pre">get_active_mode_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">active_mode&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.PredictionConfig.get_active_mode_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.PredictionConfig.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.PredictionConfig.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.credits.models.PredictionConfig.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.credits.models.PredictionConfig.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="analytics">
+<h2>Модуль analytics<a class="headerlink" href="#analytics" title="Link to this heading"></a></h2>
+<section id="analyticgraph">
+<h3>AnalyticGraph<a class="headerlink" href="#analyticgraph" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.analytics.models.</span></span><span class="sig-name descname"><span class="pre">AnalyticGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/analytics/models.html#AnalyticGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#apps.analytics.models.AnalyticGraph" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Модель для зберігання інформації про графіки аналітики.</p>
+<dl class="simple">
+<dt>Атрибути:</dt><dd><p>name: Унікальна назва графіка
+image_path: Шлях до зображення графіка
+created_at: Дата та час створення графіка</p>
+</dd>
+</dl>
+<p>Модель для зберігання інформації про графіки аналітики.</p>
+<p><strong>Властивості:</strong></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph.templates_name">
+<span class="sig-name descname"><span class="pre">templates_name</span></span><a class="headerlink" href="#apps.analytics.models.AnalyticGraph.templates_name" title="Link to this definition"></a></dt>
+<dd><p>Форматує назву графіка для відображення в шаблонах.</p>
+<p>Замінює підкреслення на пробіли та робить кожне слово з великої літери.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Відформатована назва графіка</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph.image_url">
+<span class="sig-name descname"><span class="pre">image_url</span></span><a class="headerlink" href="#apps.analytics.models.AnalyticGraph.image_url" title="Link to this definition"></a></dt>
+<dd><p>Формує повний URL-шлях до зображення графіка.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>URL-адреса зображення графіка</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#apps.analytics.models.AnalyticGraph.name" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph.image_path">
+<span class="sig-name descname"><span class="pre">image_path</span></span><a class="headerlink" href="#apps.analytics.models.AnalyticGraph.image_path" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#apps.analytics.models.AnalyticGraph.created_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/apps/analytics/models.html#AnalyticGraph.__str__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#apps.analytics.models.AnalyticGraph.__str__" title="Link to this definition"></a></dt>
+<dd><p>Повертає рядкове представлення об’єкта графіка.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Назва графіка</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id25">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">templates_name</span></span><a class="headerlink" href="#id25" title="Link to this definition"></a></dt>
+<dd><p>Форматує назву графіка для відображення в шаблонах.</p>
+<p>Замінює підкреслення на пробіли та робить кожне слово з великої літери.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Відформатована назва графіка</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id26">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">image_url</span></span><a class="headerlink" href="#id26" title="Link to this definition"></a></dt>
+<dd><p>Формує повний URL-шлях до зображення графіка.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>URL-адреса зображення графіка</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.analytics.models.AnalyticGraph.get_next_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.analytics.models.AnalyticGraph.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.analytics.models.AnalyticGraph.get_previous_by_created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="architecture.html" class="btn btn-neutral float-left" title="Архітектура системи" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="forms.html" class="btn btn-neutral float-right" title="Форми Django" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Valentyn Lushnykov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

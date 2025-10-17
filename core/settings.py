@@ -36,7 +36,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = ["corsheaders", "formtools", "django_filters", "rest_framework"]
 
-LOCAL_APPS = ["apps.accounts", "apps.credits", "apps.analytics", "apps.api"]
+LOCAL_APPS = ["apps.accounts", "apps.credits", "apps.analytics", "apps.api", "apps.docs"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -54,7 +54,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "core.urls"
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 TEMPLATES = [
     {
@@ -66,8 +65,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "apps.credits.context_processors.graphics",
-                "apps.credits.context_processors.analytics_graphs",
+                "apps.analytics.context_processors.analytics_graphs",
             ],
         },
     },
@@ -125,10 +123,10 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-STATICFILES_DIRS = []
-
-if (BASE_DIR / "static").exists():
-    STATICFILES_DIRS.append(BASE_DIR / "static")
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+    BASE_DIR / 'docs',
+]
 
 
 LOGIN_REDIRECT_URL = "home"

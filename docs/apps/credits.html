@@ -1,0 +1,1367 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="uk" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Модуль credits &mdash; Credits Approve App v1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5bdae8fd" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5bdae8fd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=25fcb8f5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Credits Approve App
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Початок роботи:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Встановлення</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#id2">Системні вимоги</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#id3">Встановлення та запуск</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#id4">1. Клонування репозиторію</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#id5">2. Налаштування змінних середовища</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#id6">3. Налаштування змінних оточення</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#docker-compose">4. Запуск з Docker Compose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#id7">5. Ініціалізація бази даних</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Швидкий старт</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#id2">Основи роботи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#id3">Вхід в систему</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#id4">Створення кредитної заявки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#api">Робота з API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#id5">Генерація аналітики</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#id6">Адміністрування (тільки для суперкористувача)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#id7">Приклади використання</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#python-sdk">Python SDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#curl">Curl приклад</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Архітектура системи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id2">Огляд</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id3">Компоненти системи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id4">Структура проекту</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id5">Технологічний стек</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#backend">Backend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#machine-learning">Machine Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id6">Візуалізація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#deployment">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id7">Потік даних</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id8">Режими прогнозування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#mode-1">Mode 1: З кредитною історією</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#mode-2">Mode 2: Без кредитної історії</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#mode-3">Mode 3: Ансамбль</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id9">База даних</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id10">Основні таблиці</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id11">Безпека</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id12">Масштабування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id13">Горизонтальне</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id14">Вертикальне</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id15">Моніторинг</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Документація:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../models.html">Моделі Django</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models.html#accounts">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#module-apps.accounts.models">User</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.accounts.models.UserManager"><code class="docutils literal notranslate"><span class="pre">UserManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.accounts.models.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#usermanager">UserManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#id6"><code class="docutils literal notranslate"><span class="pre">UserManager</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models.html#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#creditapplication">CreditApplication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.credits.models.CreditApplication"><code class="docutils literal notranslate"><span class="pre">CreditApplication</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#predictionconfig">PredictionConfig</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.credits.models.PredictionConfig"><code class="docutils literal notranslate"><span class="pre">PredictionConfig</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models.html#analytics">Модуль analytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#analyticgraph">AnalyticGraph</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.analytics.models.AnalyticGraph"><code class="docutils literal notranslate"><span class="pre">AnalyticGraph</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../forms.html">Форми Django</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../forms.html#accounts">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#loginform">LoginForm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.accounts.forms.LoginForm"><code class="docutils literal notranslate"><span class="pre">LoginForm</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#registerform">RegisterForm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.accounts.forms.RegisterForm"><code class="docutils literal notranslate"><span class="pre">RegisterForm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../forms.html#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#wizard-1-11">Форми wizard-а (кроки 1-11)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step1Form"><code class="docutils literal notranslate"><span class="pre">Step1Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step2Form"><code class="docutils literal notranslate"><span class="pre">Step2Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step3Form"><code class="docutils literal notranslate"><span class="pre">Step3Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step4Form"><code class="docutils literal notranslate"><span class="pre">Step4Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step5Form"><code class="docutils literal notranslate"><span class="pre">Step5Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step6Form"><code class="docutils literal notranslate"><span class="pre">Step6Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step7Form"><code class="docutils literal notranslate"><span class="pre">Step7Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step8Form"><code class="docutils literal notranslate"><span class="pre">Step8Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step9Form"><code class="docutils literal notranslate"><span class="pre">Step9Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step10Form"><code class="docutils literal notranslate"><span class="pre">Step10Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step11Form"><code class="docutils literal notranslate"><span class="pre">Step11Form</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#id1">Адміністративні форми</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.PredictionConfigForm"><code class="docutils literal notranslate"><span class="pre">PredictionConfigForm</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.UpdateStatusForm"><code class="docutils literal notranslate"><span class="pre">UpdateStatusForm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../forms.html#id2">Фільтри</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter"><code class="docutils literal notranslate"><span class="pre">OrderFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.PERIOD_CHOICES"><code class="docutils literal notranslate"><span class="pre">OrderFilter.PERIOD_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.Meta"><code class="docutils literal notranslate"><span class="pre">OrderFilter.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.filter_by_period"><code class="docutils literal notranslate"><span class="pre">OrderFilter.filter_by_period()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.base_filters"><code class="docutils literal notranslate"><span class="pre">OrderFilter.base_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.declared_filters"><code class="docutils literal notranslate"><span class="pre">OrderFilter.declared_filters</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../views.html">Представлення (Views)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../views.html#module-apps.accounts.views">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.accounts.views.user_login"><code class="docutils literal notranslate"><span class="pre">user_login()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.accounts.views.user_register"><code class="docutils literal notranslate"><span class="pre">user_register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.accounts.views.user_logout"><code class="docutils literal notranslate"><span class="pre">user_logout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../views.html#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#dashboardview">DashboardView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.credits.views.DashboardView"><code class="docutils literal notranslate"><span class="pre">DashboardView</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#creditwizard">CreditWizard</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.credits.views.CreditWizard"><code class="docutils literal notranslate"><span class="pre">CreditWizard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#deleteorderview">DeleteOrderView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.credits.views.DeleteOrderView"><code class="docutils literal notranslate"><span class="pre">DeleteOrderView</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#userordersview">UserOrdersView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.credits.views.UserOrdersView"><code class="docutils literal notranslate"><span class="pre">UserOrdersView</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../views.html#module-apps.analytics.views">Модуль analytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.analytics.views.analytics"><code class="docutils literal notranslate"><span class="pre">analytics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.model"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.context_object_name"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.context_object_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.template_name"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.template_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.slug_field"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.slug_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.slug_url_kwarg"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.slug_url_kwarg</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.analytics.views.collect_stats_view"><code class="docutils literal notranslate"><span class="pre">collect_stats_view()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">REST API Довідник</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#id1">Огляд</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#base-url">Base URL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id2">Автентифікація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id3">Формат відповіді</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#endpoints">Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#post-api-get-predict">POST /api/get_predict/</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#module-apps.api.serializers">Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.GENDER_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.GENDER_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.MARRIED_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.MARRIED_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.EDUCATION_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.EDUCATION_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.SELF_EMPLOYED_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.SELF_EMPLOYED_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.PROPERTY_AREA_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.PROPERTY_AREA_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.CREDIT_HISTORY_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.CREDIT_HISTORY_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.validate_credit_history"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.validate_credit_history()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#module-apps.api.views">Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#apps.api.views.get_predict"><code class="docutils literal notranslate"><span class="pre">get_predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Machine Learning:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ml/index.html">Machine Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ml/index.html#ml">Огляд ML компонентів</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/index.html#id1">Моделі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/index.html#id2">Підмодулі</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html">Модуль прогнозування</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#ml.prediction.EnsemblePredictor"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#ensemblepredictor">EnsemblePredictor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id8">Константи</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id9">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id10">Детальний процес прогнозування</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id11">Обробка помилок</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/analytics.html">Модуль аналітики</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ml/analytics.html#get-analytics">Функція get_analytics()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/analytics.html#id2">Опис процесу</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/analytics.html#id3">Типи графіків</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/analytics.html#id4">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/analytics.html#id5">Результати</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/analytics.html#id6">Логування</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/analytics.html#id7">Налаштування візуалізації</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/services.html">Модуль сервісів</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ml/services.html#ml.services.get_ensemble"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/services.html#get-ensemble">Функція get_ensemble()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/services.html#singleton">Патерн Singleton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/services.html#id4">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/services.html#id5">Трансформація даних</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/index.html#id3">Ознаки моделей</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/index.html#id4">Базові ознаки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/index.html#model-a">Інженерні ознаки (Model A)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/index.html#id5">Потік ML прогнозування</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/index.html#id6">Метрики моделей</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/index.html#id7">Model A (без кредитної історії)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/index.html#model-b">Model B (з кредитною історією)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/index.html#ensemble">Ensemble</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ml/prediction.html">Модуль прогнозування</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ml/prediction.html#ml.prediction.EnsemblePredictor"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.EnsemblePredictor.model_B"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_B</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.EnsemblePredictor.model_A"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_A</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.EnsemblePredictor.features_B"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_B</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.EnsemblePredictor.features_A"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_A</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.EnsemblePredictor.__init__"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.EnsemblePredictor.predict"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/prediction.html#ensemblepredictor">EnsemblePredictor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#id0"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id2"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_B</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id3"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_A</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id4"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_B</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id5"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_A</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id6"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ml/prediction.html#id7"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/prediction.html#id8">Константи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.ml.prediction.BASE_DIR"><code class="docutils literal notranslate"><span class="pre">ml.prediction.BASE_DIR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.ml.prediction.MODEL_DIR"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_DIR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.ml.prediction.MODEL_WITH_CH"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_WITH_CH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#ml.prediction.ml.prediction.MODEL_WITHOUT_CH"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_WITHOUT_CH</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/prediction.html#id9">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/prediction.html#id10">Детальний процес прогнозування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#mode-1">Mode 1 (з кредитною історією)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#mode-2">Mode 2 (без кредитної історії)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/prediction.html#mode-3">Mode 3 (ансамбль)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/prediction.html#id11">Обробка помилок</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ml/analytics.html">Модуль аналітики</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ml/analytics.html#get-analytics">Функція get_analytics()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/analytics.html#ml.analytics.analytics_creator.get_analytics"><code class="docutils literal notranslate"><span class="pre">get_analytics()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/analytics.html#id2">Опис процесу</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/analytics.html#id3">Типи графіків</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/analytics.html#id4">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/analytics.html#id5">Результати</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/analytics.html#id6">Логування</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/analytics.html#id7">Налаштування візуалізації</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ml/services.html">Модуль сервісів</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ml/services.html#ml.services.get_ensemble"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/services.html#get-ensemble">Функція get_ensemble()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/services.html#id0"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/services.html#singleton">Патерн Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/services.html#id2">Переваги Singleton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/services.html#id3">Діаграма життєвого циклу</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/services.html#id4">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml/services.html#id5">Трансформація даних</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ml/services.html#ml.data_transform.transform_input"><code class="docutils literal notranslate"><span class="pre">transform_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ml/services.html#id6">Маппінг полів</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Розгортання:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/docker.html">Розгортання через Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id1">Огляд</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id2">Сервіси</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id3">Структура файлів</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#dockerfile">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#docker-compose">Docker Compose</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#volumes">Volumes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#entrypoint-scripts">Entrypoint Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id4">Запуск</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id5">Перший запуск</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id6">Звичайний запуск</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id7">Команди управління</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id8">Міграції</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id9">Створення суперкористувача</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id10">Збір статичних файлів</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#shell">Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id11">Доступ до БД</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id12">Оновлення</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id13">Налагодження</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#production">Production налаштування</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/production.html">Production розгортання</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/production.html#id1">Підготовка</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#securitychecklist">1. SecurityChecklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#id2">2. Змінні оточення</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#ssl-tls">3. SSL/TLS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/production.html#id3">Оптимізація</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#gunicorn">1. Gunicorn налаштування</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#postgresql">2. PostgreSQL оптимізація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#id4">3. Кешування</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#id5">4. Статичні файли</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/production.html#id6">Моніторинг</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#id7">1. Логування</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Credits Approve App</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Модуль credits</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apps/credits.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="credits">
+<h1>Модуль credits<a class="headerlink" href="#credits" title="Link to this heading"></a></h1>
+<p>Управління кредитними заявками та прогнозуванням.</p>
+<section id="models">
+<h2>Models<a class="headerlink" href="#models" title="Link to this heading"></a></h2>
+<section id="predictionconfig">
+<h3>PredictionConfig<a class="headerlink" href="#predictionconfig" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.models.</span></span><span class="sig-name descname"><span class="pre">PredictionConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/models.html#PredictionConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Модель конфігурації режимів прогнозування.</p>
+<p>Зберігає активний режим роботи ML моделі для прогнозування
+схвалення кредитних заявок.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">active_mode</span></span></dt>
+<dd><p>Активний режим прогнозування
+- mode1: ModelA з історією кредиту
+- mode2: ModelB без історії кредиту
+- mode3: Ансамбль ModelA+ModelB</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">updated_at</span></span></dt>
+<dd><p>Дата останнього оновлення</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DateTimeField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MODE_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('mode1',</span> <span class="pre">'ModelA</span> <span class="pre">with</span> <span class="pre">credit</span> <span class="pre">history'),</span> <span class="pre">('mode2',</span> <span class="pre">'ModelB</span> <span class="pre">without</span> <span class="pre">credit</span> <span class="pre">history'),</span> <span class="pre">('mode3',</span> <span class="pre">'ModelA+ModelB')]</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">active_mode</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">updated_at</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_active_mode_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">active_mode&gt;</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="creditapplication">
+<h3>CreditApplication<a class="headerlink" href="#creditapplication" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.models.</span></span><span class="sig-name descname"><span class="pre">CreditApplication</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/models.html#CreditApplication"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Модель кредитної заявки користувача.</p>
+<p>Зберігає всю інформацію про заявку на кредит та результат
+прогнозування від ML моделі.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">user</span></span></dt>
+<dd><p>Користувач, який подав заявку</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ForeignKey</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">gender</span></span></dt>
+<dd><p>Стать заявника</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">married</span></span></dt>
+<dd><p>Сімейний стан</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">dependents</span></span></dt>
+<dd><p>Кількість утриманців</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PositiveIntegerField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">education</span></span></dt>
+<dd><p>Рівень освіти</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">self_employed</span></span></dt>
+<dd><p>Чи є самозайнятим</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">applicant_income</span></span></dt>
+<dd><p>Дохід заявника</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DecimalField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">coapplicant_income</span></span></dt>
+<dd><p>Дохід співзаявника</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DecimalField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">loan_amount</span></span></dt>
+<dd><p>Сума кредиту</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DecimalField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">loan_amount_term</span></span></dt>
+<dd><p>Термін кредиту (місяці)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PositiveIntegerField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">credit_history</span></span></dt>
+<dd><p>Наявність кредитної історії (1.0/0.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FloatField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">property_area</span></span></dt>
+<dd><p>Тип місцевості (міська/передмістя/сільська)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CharField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">prediction_result</span></span></dt>
+<dd><p>Результат прогнозування (схвалено/відхилено)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BooleanField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">created_at</span></span></dt>
+<dd><p>Дата створення заявки</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DateTimeField</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GENDER_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Male',</span> <span class="pre">'Male'),</span> <span class="pre">('Female',</span> <span class="pre">'Female')]</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MARRIED_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Yes',</span> <span class="pre">'Yes'),</span> <span class="pre">('No',</span> <span class="pre">'No')]</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">EDUCATION_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Graduate',</span> <span class="pre">'Graduate'),</span> <span class="pre">('Not</span> <span class="pre">Graduate',</span> <span class="pre">'Not</span> <span class="pre">Graduate')]</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SELF_EMPLOYED_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Yes',</span> <span class="pre">'Yes'),</span> <span class="pre">('No',</span> <span class="pre">'No')]</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROPERTY_AREA_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Urban',</span> <span class="pre">'Urban'),</span> <span class="pre">('Semiurban',</span> <span class="pre">'Semiurban'),</span> <span class="pre">('Rural',</span> <span class="pre">'Rural')]</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">user</span></span></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">gender</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">married</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">dependents</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">education</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">self_employed</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">applicant_income</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">coapplicant_income</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">loan_amount</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">loan_amount_term</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">credit_history</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">property_area</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">prediction_result</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">created_at</span></span></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_education_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">education&gt;</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_gender_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">gender&gt;</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_married_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">married&gt;</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_property_area_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">property_area&gt;</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_self_employed_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">self_employed&gt;</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">user_id</span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="forms">
+<h2>Forms<a class="headerlink" href="#forms" title="Link to this heading"></a></h2>
+<section id="step-forms">
+<h3>Step Forms<a class="headerlink" href="#step-forms" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.forms.</span></span><span class="sig-name descname"><span class="pre">Step1Form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound_field_class=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/forms.html#Step1Form"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code></p>
+<p>Форма першого кроку: вибір статі заявника.</p>
+<dl class="simple">
+<dt>Поля:</dt><dd><p>gender: Стать заявника (Чоловік/Жінка)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.forms.</span></span><span class="sig-name descname"><span class="pre">Step2Form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound_field_class=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/forms.html#Step2Form"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code></p>
+<p>Форма другого кроку: вибір сімейного стану заявника.</p>
+<dl class="simple">
+<dt>Поля:</dt><dd><p>married: Сімейний стан (Одружений/Неодружений)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.forms.</span></span><span class="sig-name descname"><span class="pre">Step3Form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound_field_class=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/forms.html#Step3Form"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code></p>
+<p>Форма третього кроку: вказання кількості утриманців.</p>
+<dl class="simple">
+<dt>Поля:</dt><dd><p>dependents: Кількість утриманців (мінімум 0)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.filters.</span></span><span class="sig-name descname"><span class="pre">OrderFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queryset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/filters.html#OrderFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FilterSet</span></code></p>
+<p>Фільтр для кредитних заявок за періодами часу.</p>
+<p>Дозволяє фільтрувати заявки за різними часовими періодами:
+всі, сьогодні, вчора, тиждень, місяць, минулий місяць, рік.</p>
+<dl class="simple">
+<dt>Поля:</dt><dd><p>period: Вибір часового періоду для фільтрації</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PERIOD_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('all',</span> <span class="pre">'All'),</span> <span class="pre">('today',</span> <span class="pre">'Today'),</span> <span class="pre">('yesterday',</span> <span class="pre">'Yesterday'),</span> <span class="pre">('week',</span> <span class="pre">'Week'),</span> <span class="pre">('month',</span> <span class="pre">'This</span> <span class="pre">month'),</span> <span class="pre">('last_month',</span> <span class="pre">'Last</span> <span class="pre">month'),</span> <span class="pre">('year',</span> <span class="pre">'This</span> <span class="pre">year')]</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="../_modules/apps/credits/filters.html#OrderFilter.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">model</span></span></dt>
+<dd><p>alias of <a class="reference internal" href="../models.html#apps.credits.models.CreditApplication" title="apps.credits.models.CreditApplication"><code class="xref py py-class docutils literal notranslate"><span class="pre">CreditApplication</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['period']</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">filter_by_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queryset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/filters.html#OrderFilter.filter_by_period"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Фільтрує queryset за вибраним часовим періодом.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>queryset</strong> – Набір об’єктів для фільтрації</p></li>
+<li><p><strong>name</strong> – Назва поля фільтру</p></li>
+<li><p><strong>value</strong> – Значення періоду (today, yesterday, week, month, last_month, year, all)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Відфільтрований набір кредитних заявок</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="views">
+<h2>Views<a class="headerlink" href="#views" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.views.</span></span><span class="sig-name descname"><span class="pre">DashboardView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#DashboardView"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.djangoproject.com/en/5.2/topics/auth/default/#django.contrib.auth.mixins.LoginRequiredMixin" title="(in Django v5.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoginRequiredMixin</span></code></a>, <a class="reference external" href="https://docs.djangoproject.com/en/5.2/ref/class-based-views/base/#django.views.generic.base.TemplateView" title="(in Django v5.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TemplateView</span></code></a></p>
+<p>Головна панель управління для користувачів та адміністраторів.</p>
+<dl class="simple">
+<dt>Для звичайних користувачів:</dt><dd><ul class="simple">
+<li><p>Показує загальну статистику по схваленим заявкам</p></li>
+<li><p>Відображає загальну суму схвалених кредитів</p></li>
+</ul>
+</dd>
+<dt>Для адміністраторів:</dt><dd><ul class="simple">
+<li><p>Список всіх заявок з фільтрацією</p></li>
+<li><p>Управління режимом прогнозування</p></li>
+<li><p>Зміна статусу заявок</p></li>
+<li><p>Видалення заявок</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">template_name</span></span></dt>
+<dd><p>Шлях до шаблону</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">form_class</span></span></dt>
+<dd><p>Форма для зміни конфігурації</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">success_url</span></span></dt>
+<dd><p>URL для редіректу після успішних дій</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'credits/index.html'</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">form_class</span></span></dt>
+<dd><p>alias of <a class="reference internal" href="../forms.html#apps.credits.forms.PredictionConfigForm" title="apps.credits.forms.PredictionConfigForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">PredictionConfigForm</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">success_url</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#DashboardView.get_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Отримує або створює конфігурацію прогнозування.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Об’єкт конфігурації</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../models.html#apps.credits.models.PredictionConfig" title="apps.credits.models.PredictionConfig">PredictionConfig</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_form</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#DashboardView.get_form"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Повертає форму конфігурації прогнозування.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Форма з поточними налаштуваннями</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../forms.html#apps.credits.forms.PredictionConfigForm" title="apps.credits.forms.PredictionConfigForm">PredictionConfigForm</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_total_approved_orders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#DashboardView.get_total_approved_orders"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Розраховує статистику по схваленим заявкам.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Словник з ключами „total_credits“ та „total_amount“</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_filtered_orders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#DashboardView.get_filtered_orders"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Отримує відфільтрований список заявок.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Набір заявок згідно встановлених фільтрів</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p>QuerySet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#DashboardView.post"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Обробляє POST запити для оновлення конфігурації або статусу заявки.</p>
+<p>Обробляє два типи запитів:
+1. Зміна активного режиму прогнозування (active_mode)
+2. Оновлення статусу заявки (prediction_result)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">HttpRequest</span></code>) – HTTP запит</p></li>
+<li><p><strong>*args</strong> – Позиційні аргументи</p></li>
+<li><p><strong>**kwargs</strong> – Іменовані аргументи</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Редірект на попередню сторінку або рендер з помилками форми</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_paginated_orders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#DashboardView.get_paginated_orders"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Розбиває заявки на сторінки.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Об’єкт сторінки з заявками (по 10 на сторінці)</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p>Page</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_context_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#DashboardView.get_context_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Формує контекст для шаблону залежно від типу користувача.</p>
+<p>Для адміністраторів додає:
+- Конфігурацію прогнозування
+- Форми для оновлення
+- Список заявок з пагінацією
+- Фільтри</p>
+<p>Для звичайних користувачів додає:
+- Загальну кількість схвалених кредитів
+- Загальну суму схвалених кредитів</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – Додаткові аргументи для контексту</p>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словник з даними для шаблону</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">apps.credits.views.</span></span><span class="sig-name descname"><span class="pre">CreditWizard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#CreditWizard"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.djangoproject.com/en/5.2/topics/auth/default/#django.contrib.auth.mixins.LoginRequiredMixin" title="(in Django v5.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoginRequiredMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">SessionWizardView</span></code></p>
+<p>Майстер покрокового заповнення кредитної заявки.</p>
+<p>Проводить користувача через 11 кроків (або 10 для режиму mode2)
+для збору всієї необхідної інформації про заявку на кредит.</p>
+<dl class="simple">
+<dt>Після завершення:</dt><dd><ul class="simple">
+<li><p>Відправляє дані в ML модель для прогнозування</p></li>
+<li><p>Зберігає заявку в базу даних</p></li>
+<li><p>Показує результат прогнозування</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">form_list</span></span></dt>
+<dd><p>Список форм для кожного кроку</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">form_list</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('gender',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step1Form'&gt;),</span> <span class="pre">('married',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step2Form'&gt;),</span> <span class="pre">('dependents',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step3Form'&gt;),</span> <span class="pre">('education',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step4Form'&gt;),</span> <span class="pre">('self_employed',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step5Form'&gt;),</span> <span class="pre">('applicant_income',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step6Form'&gt;),</span> <span class="pre">('coapplicant_income',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step7Form'&gt;),</span> <span class="pre">('loan_amount',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step8Form'&gt;),</span> <span class="pre">('loan_amount_term',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step9Form'&gt;),</span> <span class="pre">('credit_history',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step10Form'&gt;),</span> <span class="pre">('property_area',</span> <span class="pre">&lt;class</span> <span class="pre">'apps.credits.forms.Step11Form'&gt;)]</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_context_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#CreditWizard.get_context_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Додає інформацію про прогрес виконання кроків до контексту.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>form</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code>) – Поточна форма кроку</p></li>
+<li><p><strong>**kwargs</strong> – Додаткові аргументи</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Контекст з індексом кроку, загальною кількістю кроків та прогресом у відсотках</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_form_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#CreditWizard.get_form_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Формує список форм залежно від активного режиму прогнозування.</p>
+<p>У режимі mode2 пропускається крок «Кредитна історія».</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Словник форм для відображення</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_template_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#CreditWizard.get_template_names"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Повертає шаблон для поточного кроку.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Повертає<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Список з шляхом до шаблону</p>
+</dd>
+<dt class="field-even">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)">list</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">done</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form_list</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/apps/credits/views.html#CreditWizard.done"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>Обробляє завершення майстра після всіх кроків.</p>
+<p>Збирає дані з усіх форм, виконує прогнозування через ML модель,
+зберігає заявку та відображає результат.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>form_list</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>) – Список заповнених форм</p></li>
+<li><p><strong>**kwargs</strong> – Додаткові аргументи</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p>Сторінка з результатом прогнозування</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="context-processors">
+<h2>Context Processors<a class="headerlink" href="#context-processors" title="Link to this heading"></a></h2>
+</section>
+<section id="signals">
+<h2>Signals<a class="headerlink" href="#signals" title="Link to this heading"></a></h2>
+</section>
+<section id="id1">
+<h2>Приклади використання<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>Створення заявки<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">apps.credits.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">CreditApplication</span>
+
+<span class="n">application</span> <span class="o">=</span> <span class="n">CreditApplication</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">,</span>
+    <span class="n">gender</span><span class="o">=</span><span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+    <span class="n">married</span><span class="o">=</span><span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+    <span class="n">dependents</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">education</span><span class="o">=</span><span class="s2">&quot;Graduate&quot;</span><span class="p">,</span>
+    <span class="n">self_employed</span><span class="o">=</span><span class="s2">&quot;No&quot;</span><span class="p">,</span>
+    <span class="n">applicant_income</span><span class="o">=</span><span class="mf">5000.00</span><span class="p">,</span>
+    <span class="n">coapplicant_income</span><span class="o">=</span><span class="mf">2000.00</span><span class="p">,</span>
+    <span class="n">loan_amount</span><span class="o">=</span><span class="mf">150000.00</span><span class="p">,</span>
+    <span class="n">loan_amount_term</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span>
+    <span class="n">credit_history</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">property_area</span><span class="o">=</span><span class="s2">&quot;Urban&quot;</span><span class="p">,</span>
+    <span class="n">prediction_result</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="wizard">
+<h3>Використання Wizard<a class="headerlink" href="#wizard" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">apps.credits.views</span><span class="w"> </span><span class="kn">import</span> <span class="n">CreditWizard</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">django.urls</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;apply/&#39;</span><span class="p">,</span> <span class="n">CreditWizard</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;apply&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>Фільтрація заявок<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">apps.credits.filters</span><span class="w"> </span><span class="kn">import</span> <span class="n">OrderFilter</span>
+
+<span class="c1"># Отримання заявок за період</span>
+<span class="n">filterset</span> <span class="o">=</span> <span class="n">OrderFilter</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;period&#39;</span><span class="p">:</span> <span class="s1">&#39;today&#39;</span><span class="p">},</span>
+    <span class="n">queryset</span><span class="o">=</span><span class="n">CreditApplication</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">today_applications</span> <span class="o">=</span> <span class="n">filterset</span><span class="o">.</span><span class="n">qs</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>Зміна режиму прогнозування<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">apps.credits.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PredictionConfig</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">PredictionConfig</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">active_mode</span> <span class="o">=</span> <span class="s1">&#39;mode2&#39;</span>
+<span class="n">config</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Valentyn Lushnykov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

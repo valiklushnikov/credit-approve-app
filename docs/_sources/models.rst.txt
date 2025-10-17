@@ -1,0 +1,88 @@
+Моделі Django
+=============
+
+Модуль accounts
+---------------
+
+User
+~~~~
+
+.. automodule:: apps.accounts.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+UserManager
+~~~~~~~~~~~
+
+.. autoclass:: apps.accounts.models.UserManager
+   :members:
+   :special-members: __init__
+   :show-inheritance:
+
+Модуль credits
+--------------
+
+CreditApplication
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.models.CreditApplication
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+   Модель для зберігання кредитних заявок користувачів.
+
+   **Приклад використання:**
+
+   .. code-block:: python
+
+       from apps.credits.models import CreditApplication
+
+       # Створення заявки
+       application = CreditApplication.objects.create(
+           user=request.user,
+           gender="Male",
+           married="Yes",
+           dependents=2,
+           education="Graduate",
+           self_employed="No",
+           applicant_income=5000.00,
+           coapplicant_income=2000.00,
+           loan_amount=150000.00,
+           loan_amount_term=360,
+           credit_history=1.0,
+           property_area="Urban",
+           prediction_result=True
+       )
+
+PredictionConfig
+~~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.models.PredictionConfig
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+   Модель для зберігання активного режиму прогнозування.
+
+Модуль analytics
+----------------
+
+AnalyticGraph
+~~~~~~~~~~~~~
+
+.. autoclass:: apps.analytics.models.AnalyticGraph
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+   Модель для зберігання інформації про графіки аналітики.
+
+   **Властивості:**
+
+   .. autoattribute:: apps.analytics.models.AnalyticGraph.templates_name
+      :annotation:
+
+   .. autoattribute:: apps.analytics.models.AnalyticGraph.image_url
+      :annotation:

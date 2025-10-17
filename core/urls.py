@@ -10,6 +10,7 @@ urlpatterns = [
     path("accounts/", include("apps.accounts.urls", namespace="accounts")),
     path("analytics/", include("apps.analytics.urls", namespace="analytics")),
     path("api/", include("apps.api.urls", namespace="api")),
+    path("docs/", include("apps.docs.urls", namespace="docs")),
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,77 @@
+Форми Django
+============
+
+Модуль accounts
+---------------
+
+LoginForm
+~~~~~~~~~
+
+.. autoclass:: apps.accounts.forms.LoginForm
+   :members:
+   :undoc-members:
+
+RegisterForm
+~~~~~~~~~~~~
+
+.. autoclass:: apps.accounts.forms.RegisterForm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Модуль credits
+--------------
+
+Форми wizard-а (кроки 1-11)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.forms.Step1Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step2Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step3Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step4Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step5Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step6Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step7Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step8Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step9Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step10Form
+   :members:
+
+.. autoclass:: apps.credits.forms.Step11Form
+   :members:
+
+Адміністративні форми
+~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: apps.credits.forms.PredictionConfigForm
+   :members:
+   :undoc-members:
+
+.. autoclass:: apps.credits.forms.UpdateStatusForm
+   :members:
+   :undoc-members:
+
+Фільтри
+-------
+
+.. autoclass:: apps.credits.filters.OrderFilter
+   :members:
+   :undoc-members:

@@ -1,0 +1,89 @@
+Модуль accounts
+===============
+
+Управління користувачами та автентифікація.
+
+Models
+------
+
+.. automodule:: apps.accounts.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Forms
+-----
+
+.. automodule:: apps.accounts.forms
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Views
+-----
+
+.. automodule:: apps.accounts.views
+   :members:
+   :undoc-members:
+
+URL Patterns
+------------
+
+.. code-block:: python
+
+    urlpatterns = [
+        path('login/', views.user_login, name='login'),
+        path('register/', views.user_register, name='register'),
+        path('logout/', views.user_logout, name='logout'),
+    ]
+
+Приклади використання
+---------------------
+
+Реєстрація користувача
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from apps.accounts.forms import RegisterForm
+    from django.contrib.auth import get_user_model
+
+    User = get_user_model()
+
+    # Через форму
+    form = RegisterForm({
+        'email': 'user@example.com',
+        'username': 'newuser',
+        'password': 'securepass123',
+        'password_repeat': 'securepass123'
+    })
+
+    if form.is_valid():
+        user = form.save()
+        user.set_password(form.cleaned_data['password'])
+        user.save()
+
+    # Напряму через модель
+    user = User.objects.create_user(
+        email='user@example.com',
+        username='newuser',
+        password='securepass123'
+    )
+
+Вхід користувача
+~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from django.contrib.auth import authenticate, login
+
+    user = authenticate(
+        request,
+        username='user@example.com',
+        password='securepass123'
+    )
+
+    if user is not None:
+        login(request, user)
+        # Налаштування сесії
+        request.session.set_expiry(60 * 60 * 24)  # 24 години

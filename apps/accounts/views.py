@@ -4,6 +4,23 @@ from .forms import LoginForm, RegisterForm
 
 
 def user_login(request):
+    """
+        Обробляє вхід користувача в систему.
+
+        GET: Відображає форму входу
+        POST: Перевіряє облікові дані та авторизує користувача
+
+        Args:
+            request (HttpRequest): HTTP запит
+
+        Returns:
+            HttpResponse: Відрендерена сторінка входу або редірект на головну
+
+        Features:
+            - Підтримка функції "Запам'ятати мене"
+            - Валідація email та паролю
+            - Перевірка активності облікового запису
+    """
     if request.method == "POST":
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -28,6 +45,23 @@ def user_login(request):
 
 
 def user_register(request):
+    """
+        Обробляє реєстрацію нового користувача.
+
+        GET: Відображає форму реєстрації
+        POST: Створює новий обліковий запис користувача
+
+        Args:
+            request (HttpRequest): HTTP запит
+
+        Returns:
+            HttpResponse: Відрендерена сторінка реєстрації або сторінка підтвердження
+
+        Features:
+            - Валідація унікальності email та username
+            - Перевірка відповідності паролів
+            - Хешування паролю перед збереженням
+    """
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
@@ -43,6 +77,17 @@ def user_register(request):
 
 
 def user_logout(request):
+    """
+       Обробляє вихід користувача з системи.
+
+       POST: Завершує сесію користувача
+
+       Args:
+           request (HttpRequest): HTTP запит
+
+       Returns:
+           HttpResponse: Редірект на сторінку входу
+    """
     if request.method == "POST":
         logout(request)
         return redirect("accounts:login")

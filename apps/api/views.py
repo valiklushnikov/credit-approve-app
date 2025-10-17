@@ -11,6 +11,47 @@ from ml.services import get_ensemble
 @api_view(["POST"])
 @permission_classes([permissions.AllowAny])
 def get_predict(request):
+    """
+        API ендпоінт для отримання прогнозу схвалення кредитної заявки.
+
+        Приймає дані заявки, валідує їх відповідно до активного режиму
+        прогнозування (з кредитною історією або без) та повертає результат
+        прогнозування ML моделі.
+
+        Режими роботи:
+            - mode1: Прогнозування з урахуванням кредитної історії
+            - mode2: Прогнозування без урахування кредитної історії
+
+        Args:
+            request (Request): HTTP запит з даними заявки у форматі JSON
+
+        Returns:
+            Response: JSON відповідь з результатом або помилками валідації
+                - 200 OK: {"prediction": <boolean або int>}
+                - 400 BAD REQUEST: {"field_name": ["error message"]}
+
+        Example:
+            Request (mode1):
+                POST /api/predict/
+                {
+                    "gender": "Male",
+                    "married": "Yes",
+                    "dependents": 2,
+                    "education": "Graduate",
+                    "self_employed": "No",
+                    "applicant_income": 5000.00,
+                    "coapplicant_income": 2000.00,
+                    "loan_amount": 150000.00,
+                    "loan_amount_term": 360,
+                    "credit_history": "Yes",
+                    "property_area": "Urban"
+                }
+
+            Response:
+                {
+                    "prediction": 1
+                }
+    """
     predict_mode = PredictionConfig.objects.get(id=1)
 
     if predict_mode.active_mode == "mode2":

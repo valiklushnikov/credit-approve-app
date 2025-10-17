@@ -1,0 +1,876 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="uk" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Модуль прогнозування &mdash; Credits Approve App v1.0.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5bdae8fd" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=5bdae8fd" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=25fcb8f5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="Модуль аналітики" href="analytics.html" />
+    <link rel="prev" title="Machine Learning" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Credits Approve App
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Початок роботи:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Встановлення</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#id2">Системні вимоги</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#id3">Встановлення та запуск</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#id4">1. Клонування репозиторію</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#id5">2. Налаштування змінних середовища</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#id6">3. Налаштування змінних оточення</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#docker-compose">4. Запуск з Docker Compose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#id7">5. Ініціалізація бази даних</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Швидкий старт</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#id2">Основи роботи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#id3">Вхід в систему</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#id4">Створення кредитної заявки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#api">Робота з API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#id5">Генерація аналітики</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#id6">Адміністрування (тільки для суперкористувача)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#id7">Приклади використання</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#python-sdk">Python SDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickstart.html#curl">Curl приклад</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Архітектура системи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id2">Огляд</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id3">Компоненти системи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id4">Структура проекту</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id5">Технологічний стек</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#backend">Backend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#machine-learning">Machine Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id6">Візуалізація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#deployment">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id7">Потік даних</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id8">Режими прогнозування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#mode-1">Mode 1: З кредитною історією</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#mode-2">Mode 2: Без кредитної історії</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#mode-3">Mode 3: Ансамбль</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id9">База даних</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id10">Основні таблиці</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id11">Безпека</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id12">Масштабування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id13">Горизонтальне</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture.html#id14">Вертикальне</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#id15">Моніторинг</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Документація:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../models.html">Моделі Django</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models.html#accounts">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#module-apps.accounts.models">User</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.accounts.models.UserManager"><code class="docutils literal notranslate"><span class="pre">UserManager</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.accounts.models.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#usermanager">UserManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#id6"><code class="docutils literal notranslate"><span class="pre">UserManager</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models.html#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#creditapplication">CreditApplication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.credits.models.CreditApplication"><code class="docutils literal notranslate"><span class="pre">CreditApplication</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#predictionconfig">PredictionConfig</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.credits.models.PredictionConfig"><code class="docutils literal notranslate"><span class="pre">PredictionConfig</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models.html#analytics">Модуль analytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models.html#analyticgraph">AnalyticGraph</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../models.html#apps.analytics.models.AnalyticGraph"><code class="docutils literal notranslate"><span class="pre">AnalyticGraph</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../forms.html">Форми Django</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../forms.html#accounts">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#loginform">LoginForm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.accounts.forms.LoginForm"><code class="docutils literal notranslate"><span class="pre">LoginForm</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#registerform">RegisterForm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.accounts.forms.RegisterForm"><code class="docutils literal notranslate"><span class="pre">RegisterForm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../forms.html#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#wizard-1-11">Форми wizard-а (кроки 1-11)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step1Form"><code class="docutils literal notranslate"><span class="pre">Step1Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step2Form"><code class="docutils literal notranslate"><span class="pre">Step2Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step3Form"><code class="docutils literal notranslate"><span class="pre">Step3Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step4Form"><code class="docutils literal notranslate"><span class="pre">Step4Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step5Form"><code class="docutils literal notranslate"><span class="pre">Step5Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step6Form"><code class="docutils literal notranslate"><span class="pre">Step6Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step7Form"><code class="docutils literal notranslate"><span class="pre">Step7Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step8Form"><code class="docutils literal notranslate"><span class="pre">Step8Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step9Form"><code class="docutils literal notranslate"><span class="pre">Step9Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step10Form"><code class="docutils literal notranslate"><span class="pre">Step10Form</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.Step11Form"><code class="docutils literal notranslate"><span class="pre">Step11Form</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#id1">Адміністративні форми</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.PredictionConfigForm"><code class="docutils literal notranslate"><span class="pre">PredictionConfigForm</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.forms.UpdateStatusForm"><code class="docutils literal notranslate"><span class="pre">UpdateStatusForm</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../forms.html#id2">Фільтри</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter"><code class="docutils literal notranslate"><span class="pre">OrderFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.PERIOD_CHOICES"><code class="docutils literal notranslate"><span class="pre">OrderFilter.PERIOD_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.Meta"><code class="docutils literal notranslate"><span class="pre">OrderFilter.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.filter_by_period"><code class="docutils literal notranslate"><span class="pre">OrderFilter.filter_by_period()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.base_filters"><code class="docutils literal notranslate"><span class="pre">OrderFilter.base_filters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../forms.html#apps.credits.filters.OrderFilter.declared_filters"><code class="docutils literal notranslate"><span class="pre">OrderFilter.declared_filters</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../views.html">Представлення (Views)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../views.html#module-apps.accounts.views">Модуль accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.accounts.views.user_login"><code class="docutils literal notranslate"><span class="pre">user_login()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.accounts.views.user_register"><code class="docutils literal notranslate"><span class="pre">user_register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.accounts.views.user_logout"><code class="docutils literal notranslate"><span class="pre">user_logout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../views.html#credits">Модуль credits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#dashboardview">DashboardView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.credits.views.DashboardView"><code class="docutils literal notranslate"><span class="pre">DashboardView</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#creditwizard">CreditWizard</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.credits.views.CreditWizard"><code class="docutils literal notranslate"><span class="pre">CreditWizard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#deleteorderview">DeleteOrderView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.credits.views.DeleteOrderView"><code class="docutils literal notranslate"><span class="pre">DeleteOrderView</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#userordersview">UserOrdersView</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.credits.views.UserOrdersView"><code class="docutils literal notranslate"><span class="pre">UserOrdersView</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../views.html#module-apps.analytics.views">Модуль analytics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.analytics.views.analytics"><code class="docutils literal notranslate"><span class="pre">analytics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.model"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.context_object_name"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.context_object_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.template_name"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.template_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.slug_field"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.slug_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../views.html#apps.analytics.views.AnalyticGraphDetailView.slug_url_kwarg"><code class="docutils literal notranslate"><span class="pre">AnalyticGraphDetailView.slug_url_kwarg</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../views.html#apps.analytics.views.collect_stats_view"><code class="docutils literal notranslate"><span class="pre">collect_stats_view()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">REST API Довідник</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#id1">Огляд</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#base-url">Base URL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id2">Автентифікація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id3">Формат відповіді</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#endpoints">Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#post-api-get-predict">POST /api/get_predict/</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#module-apps.api.serializers">Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.GENDER_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.GENDER_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.MARRIED_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.MARRIED_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.EDUCATION_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.EDUCATION_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.SELF_EMPLOYED_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.SELF_EMPLOYED_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.PROPERTY_AREA_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.PROPERTY_AREA_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithoutCreditHistorySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">UserInfoWithoutCreditHistorySerializer.Meta</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.CREDIT_HISTORY_CHOICES"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.CREDIT_HISTORY_CHOICES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.Meta"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#apps.api.serializers.UserInfoWithCreditHistorySerializer.validate_credit_history"><code class="docutils literal notranslate"><span class="pre">UserInfoWithCreditHistorySerializer.validate_credit_history()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#module-apps.api.views">Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#apps.api.views.get_predict"><code class="docutils literal notranslate"><span class="pre">get_predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Machine Learning:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Machine Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#ml">Огляд ML компонентів</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id1">Моделі</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id2">Підмодулі</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Модуль прогнозування</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ml.prediction.EnsemblePredictor"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ensemblepredictor">EnsemblePredictor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Константи</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Детальний процес прогнозування</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Обробка помилок</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="analytics.html">Модуль аналітики</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="analytics.html#get-analytics">Функція get_analytics()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analytics.html#id2">Опис процесу</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analytics.html#id3">Типи графіків</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analytics.html#id4">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analytics.html#id5">Результати</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analytics.html#id6">Логування</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analytics.html#id7">Налаштування візуалізації</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="services.html">Модуль сервісів</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="services.html#ml.services.get_ensemble"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#get-ensemble">Функція get_ensemble()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#singleton">Патерн Singleton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#id4">Приклад використання</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.html#id5">Трансформація даних</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">Ознаки моделей</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id4">Базові ознаки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#model-a">Інженерні ознаки (Model A)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">Потік ML прогнозування</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">Метрики моделей</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id7">Model A (без кредитної історії)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#model-b">Model B (з кредитною історією)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#ensemble">Ensemble</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Модуль прогнозування</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ml.prediction.EnsemblePredictor"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.EnsemblePredictor.model_B"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_B</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.EnsemblePredictor.model_A"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_A</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.EnsemblePredictor.features_B"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_B</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.EnsemblePredictor.features_A"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_A</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.EnsemblePredictor.__init__"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.EnsemblePredictor.predict"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ensemblepredictor">EnsemblePredictor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_B</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.model_A</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_B</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.features_A</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7"><code class="docutils literal notranslate"><span class="pre">EnsemblePredictor.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Константи</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.ml.prediction.BASE_DIR"><code class="docutils literal notranslate"><span class="pre">ml.prediction.BASE_DIR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.ml.prediction.MODEL_DIR"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_DIR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.ml.prediction.MODEL_WITH_CH"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_WITH_CH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ml.prediction.ml.prediction.MODEL_WITHOUT_CH"><code class="docutils literal notranslate"><span class="pre">ml.prediction.MODEL_WITHOUT_CH</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Детальний процес прогнозування</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mode-1">Mode 1 (з кредитною історією)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mode-2">Mode 2 (без кредитної історії)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mode-3">Mode 3 (ансамбль)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">Обробка помилок</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analytics.html">Модуль аналітики</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#get-analytics">Функція get_analytics()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="analytics.html#ml.analytics.analytics_creator.get_analytics"><code class="docutils literal notranslate"><span class="pre">get_analytics()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#id2">Опис процесу</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#id3">Типи графіків</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#id4">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#id5">Результати</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#id6">Логування</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analytics.html#id7">Налаштування візуалізації</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="services.html">Модуль сервісів</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="services.html#ml.services.get_ensemble"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#get-ensemble">Функція get_ensemble()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#id0"><code class="docutils literal notranslate"><span class="pre">get_ensemble()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#singleton">Патерн Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#id2">Переваги Singleton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#id3">Діаграма життєвого циклу</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#id4">Приклад використання</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html#id5">Трансформація даних</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="services.html#ml.data_transform.transform_input"><code class="docutils literal notranslate"><span class="pre">transform_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="services.html#id6">Маппінг полів</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Розгортання:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/docker.html">Розгортання через Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id1">Огляд</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id2">Сервіси</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id3">Структура файлів</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#dockerfile">Dockerfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#docker-compose">Docker Compose</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#volumes">Volumes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#entrypoint-scripts">Entrypoint Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id4">Запуск</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id5">Перший запуск</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id6">Звичайний запуск</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id7">Команди управління</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id8">Міграції</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id9">Створення суперкористувача</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id10">Збір статичних файлів</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#shell">Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/docker.html#id11">Доступ до БД</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id12">Оновлення</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#id13">Налагодження</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/docker.html#production">Production налаштування</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/production.html">Production розгортання</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/production.html#id1">Підготовка</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#securitychecklist">1. SecurityChecklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#id2">2. Змінні оточення</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#ssl-tls">3. SSL/TLS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/production.html#id3">Оптимізація</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#gunicorn">1. Gunicorn налаштування</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#postgresql">2. PostgreSQL оптимізація</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#id4">3. Кешування</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#id5">4. Статичні файли</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../deployment/production.html#id6">Моніторинг</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deployment/production.html#id7">1. Логування</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Credits Approve App</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Machine Learning</a></li>
+      <li class="breadcrumb-item active">Модуль прогнозування</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ml/prediction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-ml.prediction">
+<span id="id1"></span><h1>Модуль прогнозування<a class="headerlink" href="#module-ml.prediction" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ml.prediction.EnsemblePredictor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ml.prediction.</span></span><span class="sig-name descname"><span class="pre">EnsemblePredictor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_with_ch_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_without_ch_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ml/prediction.html#EnsemblePredictor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ml.prediction.EnsemblePredictor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Клас для прогнозування схвалення кредитних заявок з використанням ансамблю ML моделей.</p>
+<dl class="simple">
+<dt>Використовує дві попередньо навчені моделі:</dt><dd><ul class="simple">
+<li><p>model_B: модель з урахуванням кредитної історії (11 ознак)</p></li>
+<li><p>model_A: модель без урахування кредитної історії (10 ознак + 4 додаткові)</p></li>
+</ul>
+</dd>
+<dt>Підтримує три режими прогнозування:</dt><dd><ul class="simple">
+<li><p>mode1: Тільки model_B (з кредитною історією, поріг 0.5)</p></li>
+<li><p>mode2: Тільки model_A (без кредитної історії, поріг 0.35)</p></li>
+<li><p>mode3: Ансамбль обох моделей (усереднення ймовірностей, поріг 0.5)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ml.prediction.EnsemblePredictor.model_B">
+<span class="sig-name descname"><span class="pre">model_B</span></span><a class="headerlink" href="#ml.prediction.EnsemblePredictor.model_B" title="Link to this definition"></a></dt>
+<dd><p>Завантажена ML модель з кредитною історією</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ml.prediction.EnsemblePredictor.model_A">
+<span class="sig-name descname"><span class="pre">model_A</span></span><a class="headerlink" href="#ml.prediction.EnsemblePredictor.model_A" title="Link to this definition"></a></dt>
+<dd><p>Завантажена ML модель без кредитної історії</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ml.prediction.EnsemblePredictor.features_B">
+<span class="sig-name descname"><span class="pre">features_B</span></span><a class="headerlink" href="#ml.prediction.EnsemblePredictor.features_B" title="Link to this definition"></a></dt>
+<dd><p>Список ознак для model_B (11 ознак)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ml.prediction.EnsemblePredictor.features_A">
+<span class="sig-name descname"><span class="pre">features_A</span></span><a class="headerlink" href="#ml.prediction.EnsemblePredictor.features_A" title="Link to this definition"></a></dt>
+<dd><p>Список ознак для model_A (10 базових ознак)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Викликає<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#FileNotFoundError" title="(in Python v3.14)"><strong>FileNotFoundError</strong></a> – Якщо файли моделей не знайдено за вказаними шляхами</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ml.prediction.EnsemblePredictor.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_with_ch_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_without_ch_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ml/prediction.html#EnsemblePredictor.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ml.prediction.EnsemblePredictor.__init__" title="Link to this definition"></a></dt>
+<dd><p>Ініціалізує EnsemblePredictor та завантажує ML моделі.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_with_ch_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Шлях до pkl файлу моделі з кредитною історією</p></li>
+<li><p><strong>model_without_ch_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Шлях до pkl файлу моделі без кредитної історії</p></li>
+</ul>
+</dd>
+<dt class="field-even">Викликає<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#FileNotFoundError" title="(in Python v3.14)"><strong>FileNotFoundError</strong></a> – Якщо будь-який з файлів моделей не існує</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ml.prediction.EnsemblePredictor.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mode3'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ml/prediction.html#EnsemblePredictor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ml.prediction.EnsemblePredictor.predict" title="Link to this definition"></a></dt>
+<dd><p>Виконує прогнозування схвалення кредитної заявки.</p>
+<p>Трансформує вхідні дані, підготовує ознаки для моделей та повертає
+бінарне рішення (0 - відхилено, 1 - схвалено) залежно від обраного методу.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>) – Сирі дані заявки у форматі Django форм</p></li>
+<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Метод прогнозування. За замовчуванням «mode3»
+- «mode1»: Використовує тільки model_B (поріг 0.5)
+- «mode2»: Використовує тільки model_A (поріг 0.35)
+- «mode3»: Ансамбль обох моделей (поріг 0.5)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Результат прогнозування (0 або 1)</dt><dd><ul class="simple">
+<li><p>0: Кредит відхилено</p></li>
+<li><p>1: Кредит схвалено</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a></p>
+</dd>
+<dt class="field-even">Викликає<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – Якщо method не є одним з: „mode1“, „mode2“, „mode3“</p>
+</dd>
+</dl>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">predictor</span> <span class="o">=</span> <span class="n">EnsemblePredictor</span><span class="p">(</span><span class="n">model_path1</span><span class="p">,</span> <span class="n">model_path2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>    <span class="s2">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;married&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;loan_amount&quot;</span><span class="p">:</span> <span class="mf">150000.0</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="o">...</span>
+<span class="gp">... </span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;mode3&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># 1 або 0</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<section id="ensemblepredictor">
+<h2>EnsemblePredictor<a class="headerlink" href="#ensemblepredictor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ml.prediction.</span></span><span class="sig-name descname"><span class="pre">EnsemblePredictor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_with_ch_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_without_ch_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ml/prediction.html#EnsemblePredictor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Клас для прогнозування схвалення кредитних заявок з використанням ансамблю ML моделей.</p>
+<dl class="simple">
+<dt>Використовує дві попередньо навчені моделі:</dt><dd><ul class="simple">
+<li><p>model_B: модель з урахуванням кредитної історії (11 ознак)</p></li>
+<li><p>model_A: модель без урахування кредитної історії (10 ознак + 4 додаткові)</p></li>
+</ul>
+</dd>
+<dt>Підтримує три режими прогнозування:</dt><dd><ul class="simple">
+<li><p>mode1: Тільки model_B (з кредитною історією, поріг 0.5)</p></li>
+<li><p>mode2: Тільки model_A (без кредитної історії, поріг 0.35)</p></li>
+<li><p>mode3: Ансамбль обох моделей (усереднення ймовірностей, поріг 0.5)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">model_B</span></span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Завантажена ML модель з кредитною історією</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">model_A</span></span><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Завантажена ML модель без кредитної історії</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">features_B</span></span><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Список ознак для model_B (11 ознак)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">features_A</span></span><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>Список ознак для model_A (10 базових ознак)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Викликає<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#FileNotFoundError" title="(in Python v3.14)"><strong>FileNotFoundError</strong></a> – Якщо файли моделей не знайдено за вказаними шляхами</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_with_ch_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_without_ch_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ml/prediction.html#EnsemblePredictor.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Ініціалізує EnsemblePredictor та завантажує ML моделі.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_with_ch_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Шлях до pkl файлу моделі з кредитною історією</p></li>
+<li><p><strong>model_without_ch_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – Шлях до pkl файлу моделі без кредитної історії</p></li>
+</ul>
+</dd>
+<dt class="field-even">Викликає<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#FileNotFoundError" title="(in Python v3.14)"><strong>FileNotFoundError</strong></a> – Якщо будь-який з файлів моделей не існує</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mode3'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ml/prediction.html#EnsemblePredictor.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Виконує прогнозування схвалення кредитної заявки.</p>
+<p>Трансформує вхідні дані, підготовує ознаки для моделей та повертає
+бінарне рішення (0 - відхилено, 1 - схвалено) залежно від обраного методу.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметри<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>) – Сирі дані заявки у форматі Django форм</p></li>
+<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Метод прогнозування. За замовчуванням «mode3»
+- «mode1»: Використовує тільки model_B (поріг 0.5)
+- «mode2»: Використовує тільки model_A (поріг 0.35)
+- «mode3»: Ансамбль обох моделей (поріг 0.5)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Повертає<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Результат прогнозування (0 або 1)</dt><dd><ul class="simple">
+<li><p>0: Кредит відхилено</p></li>
+<li><p>1: Кредит схвалено</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Тип повернення<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a></p>
+</dd>
+<dt class="field-even">Викликає<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – Якщо method не є одним з: „mode1“, „mode2“, „mode3“</p>
+</dd>
+</dl>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">predictor</span> <span class="o">=</span> <span class="n">EnsemblePredictor</span><span class="p">(</span><span class="n">model_path1</span><span class="p">,</span> <span class="n">model_path2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>    <span class="s2">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;married&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;loan_amount&quot;</span><span class="p">:</span> <span class="mf">150000.0</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="o">...</span>
+<span class="gp">... </span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;mode3&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># 1 або 0</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id8">
+<h2>Константи<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="ml.prediction.ml.prediction.BASE_DIR">
+<span class="sig-prename descclassname"><span class="pre">ml.prediction.</span></span><span class="sig-name descname"><span class="pre">BASE_DIR</span></span><a class="headerlink" href="#ml.prediction.ml.prediction.BASE_DIR" title="Link to this definition"></a></dt>
+<dd><p>Базова директорія проекту</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ml.prediction.ml.prediction.MODEL_DIR">
+<span class="sig-prename descclassname"><span class="pre">ml.prediction.</span></span><span class="sig-name descname"><span class="pre">MODEL_DIR</span></span><a class="headerlink" href="#ml.prediction.ml.prediction.MODEL_DIR" title="Link to this definition"></a></dt>
+<dd><p>Директорія зі збереженими ML моделями</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ml.prediction.ml.prediction.MODEL_WITH_CH">
+<span class="sig-prename descclassname"><span class="pre">ml.prediction.</span></span><span class="sig-name descname"><span class="pre">MODEL_WITH_CH</span></span><a class="headerlink" href="#ml.prediction.ml.prediction.MODEL_WITH_CH" title="Link to this definition"></a></dt>
+<dd><p>Шлях до моделі з кредитною історією</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="ml.prediction.ml.prediction.MODEL_WITHOUT_CH">
+<span class="sig-prename descclassname"><span class="pre">ml.prediction.</span></span><span class="sig-name descname"><span class="pre">MODEL_WITHOUT_CH</span></span><a class="headerlink" href="#ml.prediction.ml.prediction.MODEL_WITHOUT_CH" title="Link to this definition"></a></dt>
+<dd><p>Шлях до моделі без кредитної історії</p>
+</dd></dl>
+
+</section>
+<section id="id9">
+<h2>Приклад використання<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ml.prediction</span><span class="w"> </span><span class="kn">import</span> <span class="n">EnsemblePredictor</span><span class="p">,</span> <span class="n">MODEL_WITH_CH</span><span class="p">,</span> <span class="n">MODEL_WITHOUT_CH</span>
+
+<span class="c1"># Ініціалізація предиктора</span>
+<span class="n">predictor</span> <span class="o">=</span> <span class="n">EnsemblePredictor</span><span class="p">(</span><span class="n">MODEL_WITH_CH</span><span class="p">,</span> <span class="n">MODEL_WITHOUT_CH</span><span class="p">)</span>
+
+<span class="c1"># Дані заявки</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;married&quot;</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dependents&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;education&quot;</span><span class="p">:</span> <span class="s2">&quot;Graduate&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;self_employed&quot;</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;applicant_income&quot;</span><span class="p">:</span> <span class="mf">5000.00</span><span class="p">,</span>
+    <span class="s2">&quot;coapplicant_income&quot;</span><span class="p">:</span> <span class="mf">2000.00</span><span class="p">,</span>
+    <span class="s2">&quot;loan_amount&quot;</span><span class="p">:</span> <span class="mf">150000.00</span><span class="p">,</span>
+    <span class="s2">&quot;loan_amount_term&quot;</span><span class="p">:</span> <span class="mi">360</span><span class="p">,</span>
+    <span class="s2">&quot;credit_history&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="s2">&quot;property_area&quot;</span><span class="p">:</span> <span class="s2">&quot;Urban&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Mode 1: Тільки Model B</span>
+<span class="n">result_mode1</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;mode1&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mode 1: </span><span class="si">{</span><span class="n">result_mode1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 0 або 1</span>
+
+<span class="c1"># Mode 2: Тільки Model A</span>
+<span class="n">result_mode2</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;mode2&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mode 2: </span><span class="si">{</span><span class="n">result_mode2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Mode 3: Ансамбль</span>
+<span class="n">result_mode3</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;mode3&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mode 3: </span><span class="si">{</span><span class="n">result_mode3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h2>Детальний процес прогнозування<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<section id="mode-1">
+<h3>Mode 1 (з кредитною історією)<a class="headerlink" href="#mode-1" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Перетворення даних через <code class="docutils literal notranslate"><span class="pre">transform_input()</span></code></p></li>
+<li><p>Створення DataFrame з 11 ознаками</p></li>
+<li><p>Виклик <code class="docutils literal notranslate"><span class="pre">model_B.predict_proba()</span></code></p></li>
+<li><p>Отримання ймовірності класу 1</p></li>
+<li><p>Порівняння з порогом 0.5</p></li>
+<li><p>Повернення бінарного результату</p></li>
+</ol>
+</section>
+<section id="mode-2">
+<h3>Mode 2 (без кредитної історії)<a class="headerlink" href="#mode-2" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Перетворення даних через <code class="docutils literal notranslate"><span class="pre">transform_input()</span></code></p></li>
+<li><p>Створення DataFrame з 10 базових ознак</p></li>
+<li><p>Додавання 4 інженерних ознак:</p>
+<ul class="simple">
+<li><p>Total_Income</p></li>
+<li><p>Income_to_Loan</p></li>
+<li><p>Loan_per_Term</p></li>
+<li><p>Is_Graduate_and_Employed</p></li>
+</ul>
+</li>
+<li><p>Виклик <code class="docutils literal notranslate"><span class="pre">model_A.predict_proba()</span></code></p></li>
+<li><p>Отримання ймовірності класу 1</p></li>
+<li><p>Порівняння з порогом 0.35 (знижений для збільшення recall)</p></li>
+<li><p>Повернення бінарного результату</p></li>
+</ol>
+</section>
+<section id="mode-3">
+<h3>Mode 3 (ансамбль)<a class="headerlink" href="#mode-3" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Виконання прогнозування для обох моделей</p></li>
+<li><p>Отримання ймовірностей від model_A та model_B</p></li>
+<li><p>Обчислення середнього арифметичного</p></li>
+<li><p>Порівняння з порогом 0.5</p></li>
+<li><p>Повернення бінарного результату</p></li>
+</ol>
+</section>
+</section>
+<section id="id11">
+<h2>Обробка помилок<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">predictor</span> <span class="o">=</span> <span class="n">EnsemblePredictor</span><span class="p">(</span><span class="n">MODEL_WITH_CH</span><span class="p">,</span> <span class="n">MODEL_WITHOUT_CH</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Файл моделі не знайдено: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;invalid_mode&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Невірний метод: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Machine Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="analytics.html" class="btn btn-neutral float-right" title="Модуль аналітики" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Valentyn Lushnykov.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

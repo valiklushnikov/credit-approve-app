@@ -1,0 +1,76 @@
+Модуль analytics
+================
+
+Генерація та відображення аналітичних графіків.
+
+Models
+------
+
+.. automodule:: apps.analytics.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Views
+-----
+
+.. automodule:: apps.analytics.views
+   :members:
+   :undoc-members:
+
+Context Processors
+------------------
+
+.. automodule:: apps.analytics.context_processors
+   :members:
+   :undoc-members:
+
+Приклади використання
+---------------------
+
+Генерація аналітики
+~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from ml.analytics.analytics_creator import get_analytics
+
+    # Створення всіх графіків
+    get_analytics()
+
+Отримання графіків
+~~~~~~~~~~~~~~~~~~
+
+.. code-block:: python
+
+    from apps.analytics.models import AnalyticGraph
+
+    # Всі графіки
+    graphs = AnalyticGraph.objects.all()
+
+    # Конкретний графік
+    graph = AnalyticGraph.objects.get(name='loan_distribution')
+
+    # Використання властивостей
+    print(graph.templates_name)  # "Loan Distribution"
+    print(graph.image_url)       # "/media/loan_analysis_plots/01_loan_distribution.png"
+
+AJAX запит на генерацію
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    fetch('/analytics/collect-stats/', {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': getCookie('csrftoken'),
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            console.log('Графіки створено!');
+            location.reload();
+        }
+    });
